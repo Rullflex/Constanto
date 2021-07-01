@@ -1,0 +1,66 @@
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: $transition--very-fast;
+    user-select: none;
+
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    overflow: visible;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    -webkit-appearance: none;
+    border-radius: 0;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+    &:focus {}
+    &:active {}
+    &:focus-visible {}
+    
+    &:not(:disabled) {
+        cursor: pointer;
+    }
+    &::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
+}
+.btn {
+    &-solid-primary {
+        width: 17.5rem;
+        line-height: 4.0625rem;
+
+        background: $primary;
+        box-shadow: 0px 2px 0px #4EBFC7, 0px 4px 11px rgba(120, 247, 255, 0.61);
+        border-radius: 0.4375rem;
+
+        font-size: 1.125rem;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+
+        @media (min-width: map-get($grid-breakpoints, md)) {}
+        @media (min-width: map-get($grid-breakpoints, lg)) {}
+        @media (min-width: map-get($grid-breakpoints, xl)) {}
+      
+    }
+
+    &-outline-primary {
+        width: 10.8125rem;
+        line-height: 2.1875rem;
+
+        border: 0.0625rem solid $primary;
+        border-radius: 0.4375rem;
+
+        color: $primary;
+        font-size: 0.875rem;
+    }
+}

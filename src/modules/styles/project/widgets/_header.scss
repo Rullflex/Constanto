@@ -1,0 +1,36 @@
+.header {
+    &__row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 3.6875rem;
+    }
+
+    &__logo svg {
+        width: 7.25rem;
+    }
+
+    &__union {
+        display: flex;
+        align-items: center;
+        padding-right: 0.4rem;
+    }
+
+    &__phone-icon {
+        width: 1.6875rem;
+        color: $primary;
+        margin-right: 0.75rem;
+
+        @media (min-width: map-get($grid-breakpoints, sm)) {
+            display: none;
+        }
+    }
+
+    &__phone-btn {
+        display: none;
+        
+        @media (min-width: map-get($grid-breakpoints, sm)) {
+            display: flex;
+        }
+    }
+}

@@ -1,0 +1,31 @@
+.s1 {
+    height: 500px;
+
+    &__bg {
+        z-index: -10;
+        position: absolute;
+        top: -3.6875rem;
+        left: 0;
+        width: 100%;
+        height: calc(100% + 3.6875rem);
+        background: $text-dark;
+    }
+
+    &__title {
+        font-weight: 800;
+        font-size: 2.1875rem;
+        line-height: 0.94em;
+        letter-spacing: 0.025em;
+        color: $primary;
+        background: linear-gradient(304deg, rgba(45, 129, 255, 1),rgba(130, 227, 233, 1));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &__img-man {
+        width: 27.25rem;
+        position: absolute;
+        top: 11.875rem;
+        left: -6.0625rem;
+    }
+}

@@ -1,0 +1,49 @@
+-
+    var linksList = [
+        {
+            title: 'Обо мне',
+            href: '#',
+        },
+        {
+            title: 'Кейсы',
+            href: '#',
+        },
+        {
+            title: 'Отзывы',
+            href: '#',
+        },
+        {
+            title: 'Этапы работы',
+            href: '#',
+        },
+        {
+            title: 'FAQ',
+            href: '#',
+        },
+        {
+            title: 'Контакты',
+            href: '#',
+        },
+    ]
+
+
+mixin header-menu 
+    .menu&attributes(attributes)
+        a.menu-icon(href="#") #[i]#[i]#[i]#[i]
+        .menu-drop(data-uk-dropdown="mode: click; pos: bottom-justify; boundary: .header; boundary-align: true; animation: uk-animation-slide-top-small; duration: 300")
+            block
+
+//- Template
+
+header.header 
+    .container 
+        .header__row 
+            a.header__logo
+                +icon('logo')
+
+            .header__union
+                a(href="#")
+                    +icon('phone').header__phone-icon
+                a(href="#").btn.btn-outline-primary.header__phone-btn Обратный звонок
+
+                +header-menu.header__menu

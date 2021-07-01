@@ -1,0 +1,15 @@
+extends modules/layout/_layout
+
+prepend head
+	title Title your page
+	meta(name="description", content="Описание страницы")
+
+block content
+	main.main
+		section.s1 
+			.ibg.s1__bg
+				+picture-min(jpg, `${assets}s1-bg`, `${assets}s1-bg`, 'xsmlb')
+			.container 
+				h1.s1__title Целевые клиенты в&nbsp;ваш&nbsp;бизнес
+				+picture(png, `${assets}s1-man`, 'n').s1__img-man
+				button.btn.btn-solid-primary Записаться

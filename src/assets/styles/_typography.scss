@@ -1,0 +1,55 @@
+$relative-link-to-modules: "../fonts";
+
+// Raleway
+
+@include font-face("Raleway", "Raleway-Light", "300", "normal", $relative-link-to-modules);
+
+@include font-face("Raleway", "Raleway-Regular", "400", "normal", $relative-link-to-modules);
+
+@include font-face("Raleway", "Raleway-Medium", "500", "normal", $relative-link-to-modules);
+
+// @include font-face("Raleway", "Raleway-SemiBold", "600", "normal", $relative-link-to-modules);
+
+@include font-face("Raleway", "Raleway-Bold", "700", "normal", $relative-link-to-modules);
+
+@include font-face("Raleway", "Raleway-ExtraBold", "800", "normal", $relative-link-to-modules);
+
+// Montserrat
+
+@include font-face("Montserrat", "Montserrat-Regular", "400", "normal", $relative-link-to-modules);
+
+@include font-face("Montserrat", "Montserrat-Medium", "500", "normal", $relative-link-to-modules);
+
+// Circe
+
+@include font-face("Circe", "Circe-Light", "300", "normal", $relative-link-to-modules);
+
+@include font-face("Circe", "Circe-Regular", "400", "normal", $relative-link-to-modules);
+
+// @include font-face("F", "F-Medium", "500", "normal", $relative-link-to-modules);
+
+// @include font-face("F", "F-SemiBold", "600", "normal", $relative-link-to-modules);
+
+@include font-face("Circe", "Circe-Bold", "700", "normal", $relative-link-to-modules);
+
+// @include font-face("F", "F-ExtraBold", "800", "normal", $relative-link-to-modules);
+
+// @include font-face("F", "F-Black", "900", "normal", $relative-link-to-modules);
+
+
+
+// RobotoCondensed
+
+@include font-face("RobotoCondensed", "RobotoCondensed-Light", "300", "normal", $relative-link-to-modules);
+
+// @include font-face("F", "F-Regular", "400", "normal", $relative-link-to-modules);
+
+// @include font-face("F", "F-Medium", "500", "normal", $relative-link-to-modules);
+
+// @include font-face("F", "F-SemiBold", "600", "normal", $relative-link-to-modules);
+
+// @include font-face("F", "F-Bold", "700", "normal", $relative-link-to-modules);
+
+// @include font-face("F", "F-ExtraBold", "800", "normal", $relative-link-to-modules);
+
+// @include font-face("F", "F-Black", "900", "normal", $relative-link-to-modules);
