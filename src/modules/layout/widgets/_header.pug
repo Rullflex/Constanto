@@ -26,6 +26,10 @@
         },
     ]
 
+mixin headerLinksList
+    ul.header__links&attributes(attributes)
+        each link, idx  in linksList
+            li.header__li: a.header__link(href=link.href title=link.title)= link.title
 
 mixin header-menu 
     .menu&attributes(attributes)
@@ -41,9 +45,12 @@ header.header
             a.header__logo
                 +icon('logo')
 
+            +headerLinksList.d-none.d-lg-flex
+
             .header__union
                 a(href="#")
                     +icon('phone').header__phone-icon
                 a(href="#").btn.btn-outline-primary.header__phone-btn Обратный звонок
 
                 +header-menu.header__menu
+                    +headerLinksList.header__menu-links

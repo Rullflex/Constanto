@@ -10,3 +10,22 @@
         padding-right: 0;
     }
 }
+
+h2 {
+    font-weight: bold;
+    font-size: 1.4375rem;
+    line-height: 1.179em;
+
+    @media (min-width: map-get($grid-breakpoints, sm)) {
+        font-size: 1.75rem;
+    }
+
+    @media (min-width: map-get($grid-breakpoints, md)) {
+        font-size: 2.4375rem;
+        text-align: center;
+    }
+
+    @media (min-width: map-get($grid-breakpoints, xl)) {
+        font-size: 2.25rem;
+    }
+}

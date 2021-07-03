@@ -7,9 +7,126 @@ prepend head
 block content
 	main.main
 		section.s1 
-			.ibg.s1__bg
-				+picture-min(jpg, `${assets}s1-bg`, `${assets}s1-bg`, 'xsmlb')
-			.container 
+			.s1__bg
+				+picture-min(jpg, `${assets}s1-bg`, `${assets}s1-bg`, 'xsml')
+			.container.s1__ctn
+				+picture-min(png, `${assets}s1-man`, `${assets}s1-man`, 'n').s1__img-man
+				.s1__circle
+				.s1__man-name Константин #[br]Курышев
+				.s1__man-position Специалист по рекламе#[br] в Instagram и Facebook
+
 				h1.s1__title Целевые клиенты в&nbsp;ваш&nbsp;бизнес
-				+picture(png, `${assets}s1-man`, 'n').s1__img-man
-				button.btn.btn-solid-primary Записаться
+				p.s1__subtitle Начните получать целевой и стабильный поток заявок от 60₽ в ваш бизнес с помошью таргетированной рекламы
+
+				.s1__target-block
+					.s1__target-gradient Запишитесь на бесплатную консультацию,
+					.s1__target-text на которой мы разберем рекламную кампанию и стратегию продвижения вашего бизнеса
+					button.s1__target-btn.btn.btn-solid-primary Записаться
+
+				.s1__numbers-block
+					.s1__numbers-item
+						.s1__numbers-lg 2 Года
+						.s1__numbers-descr практического опыта
+					.s1__numbers-item
+						.s1__numbers-lg #[span.s1__numbers-lg--sm до] 10раз
+						.s1__numbers-descr окупамемость затрат
+
+		section.s2 
+			.container.s2__ctn 
+				h2.s2__title Еще немного фактов и&nbsp;цифр обо мне и&nbsp;деятельности
+
+				.s2__list 
+					.s2__list-item
+						img(src=`${assets}s2-i1.svg`, alt="").s2__list-before
+						.s2__list-title 20 проектов
+						.s2__list-descr реализовано в разных нишах
+					.s2__list-item
+						img(src=`${assets}s2-i2.svg`, alt="").s2__list-before
+						.s2__list-title от 60 ₽
+						.s2__list-descr стоимость заявки
+					.s2__list-item
+						img(src=`${assets}s2-i3.svg`, alt="").s2__list-before
+						.s2__list-title более 4млн. ₽
+						.s2__list-descr рекламного бюджета доверено
+					.s2__list-item
+						img(src=`${assets}s2-i4.svg`, alt="").s2__list-before
+						.s2__list-title более 6 мес.
+						.s2__list-descr в среднем работают со&nbsp;мной
+
+				.s2__chart-block
+					.s2__chart-ibg
+						+picture(jpg, `${assets}s2-bg-block`, 'xsml')
+					.s2__chart-title В команде есть дизайнер и копирайтер
+					.s2__chart-descr Качественно проработанный&nbsp;креатив — один из важнейших этапов для получения целевых заявок. 
+					+icon('chart-gradient').s2__chart-svg
+
+		section.s3 
+			.s3__bg
+				+picture(jpg, `${assets}s3-bg`, 'xsml')
+			.container.s3__ctn 
+				h2.s3__title Посмотрите креативы, которые мы делаем с&nbsp;командой:
+
+				.s3__slider(data-uk-slider)
+					.s3__slider-container.uk-slider-container 
+						ul.s3__slider-items.uk-slider-items 
+							- for(var i = 1; i <= 6; i++)
+								li.s3__slider-item
+									+icon('phone-mask').s3__slider-item-phone
+									.s3__slider-item-image
+										+picture(jpg, `${assets}s3-i${i}`, 'n')
+					+slider-dotnav.s3__slider-dotnav
+
+				button.btn.btn-solid-primary Оставить заявку
+
+		section.s4 
+			.container.s4__ctn 
+				h2.s4__title С каждым днём на рынке появляется всё больше таргетологов.
+				p.s4__subtitle Многие из них в процессе работы оказываются некомпетентны или не выполняют свои обязательства
+
+				.s4__block.s4__block-1
+					.s4__block-title Возможно, вам знакомы ситуации, когда:
+					ul.s4__block-list 
+						li Таргетолог долго не выходит на связь, исчезает
+						li Вам приходится контролировать его работу и тратить своё время
+						li Нет отчётности: количество заявок, их цена и окупаемость ваших вложений
+						li Реклама не дает тех результатов, на которые вы изначально рассчитывали
+					+picture-min(png, `${assets}s4-i1`, `${assets}s4-i1`, 'xs').s4__block-image.s4__block-image-1
+
+				.s4__block.s4__block-2
+					.s4__block-title В итоге вы нервничаете и&nbsp;не знаете, что делать
+					ul.s4__block-list 
+						li Чтобы минимизировать риск нарваться на&nbsp;подобные ситуации, вы обращаетесь к&nbsp;вашим знакомым, которые могут порекомендовать хорошего специалиста
+						li Но если такой возможности не предоставляется, вам приходится искать нового специалиста самостоятельно
+						li Из-за чего перед вами встает вопрос: какого специалиста выбрать, чтобы он качественно предоставил услугу и не обманул вас
+					+picture-min(png, `${assets}s4-i2`, `${assets}s4-i2`, 'xs').s4__block-image.s4__block-image-2
+
+		section.s5 
+			.s5__ctn.container
+				h2.s5__title Почему стоит рассмотреть меня в качестве специалиста?
+
+				.s5__items-wrap
+					.s5__item 
+						+icon('script').s5__item-icon
+						.s5__item-title ИП, работаю#[br] по договору
+						.s5__item-descr Оплату можно произвести безналичным платежом с вашего расчетного счета
+						
+					.s5__item 
+						+icon('web-rocket').s5__item-icon
+						.s5__item-title Скорость
+						.s5__item-descr Настраиваю и запускаю рекламную кампанию за 5 дней с момента оплаты
+
+					.s5__item 
+						+icon('honesty').s5__item-icon
+						.s5__item-title Честность
+						.s5__item-descr Если на этапе переговоров я пойму, что работа с таргет рекламой не сможет закрыть вашу задачу, я открыто скажу об этом и предложу другой вариант её решения на основе своего опыта
+
+					.s5__item 
+						+icon('reports').s5__item-icon
+						.s5__item-title Отчёты
+						.s5__item-descr Предоставляю ежедневную, еженедельную и ежемесячную аналитику ведения рекламы. Все материалы и информация о работе останутся у вас даже после окончания сотрудничества
+
+					.s5__item 
+						+icon('unit-economy').s5__item-icon
+						.s5__item-title Unit-#[br]экономика
+						.s5__item-descr Считаю и анализирую самый главный показатель - окупаемость рекламной кампании, чтобы вы точно знали, сколько потратили на привлечениека ждого пользователя и сколько с него заработали
+

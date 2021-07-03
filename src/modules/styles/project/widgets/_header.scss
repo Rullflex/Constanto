@@ -16,6 +16,27 @@
         padding-right: 0.4rem;
     }
 
+    &__menu {
+
+    }
+
+    &__menu-links {
+        text-align: right;
+    }
+
+    &__links {
+
+    }
+
+    &__li {
+        margin-bottom: 1.0625rem;
+    }
+
+    &__link {
+        color: $text-light;
+        line-height: 0.94em;
+    }
+
     &__phone-icon {
         width: 1.6875rem;
         color: $primary;

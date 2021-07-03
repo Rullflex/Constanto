@@ -2,6 +2,7 @@
     @media (min-width: map-get($grid-breakpoints, lg)) {
         display: none;
     }
+
     &-icon {
         width: 1.9375rem;
         display: block;
@@ -12,14 +13,18 @@
             display: block;
             background: $primary;
             transition: $transition--fast;
+
             &:not(:nth-child(3)) {
                 margin-bottom: 0.4rem;
             }
             &:last-child {
+
                 @include center-item-y("absolute");
             }
         }
         &[aria-expanded=true]{
+            z-index: 99999;
+
             i {
                 &:nth-child(1) {
                     opacity: 0;
@@ -36,12 +41,15 @@
             }
         }
     }
+
     &-drop {
         display: none;
+        height: 100vh;
         min-width: 200px;
-        padding: 15px;
-        background: #f8f8f8;
+        padding: 6.5rem 1.8rem 0 0;
+        background: rgba(31, 38, 89, 0.9);
         color: #666;
         margin: 0;
+        top: 0 !important;
     }
 }

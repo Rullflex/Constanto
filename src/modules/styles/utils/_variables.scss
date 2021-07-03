@@ -1,19 +1,22 @@
 // --- Color system ---
 
+$primary: #64F1FA;
+$secondary: #151453;
+
 $text-light:#ffffff;
-$text-dark:#151453;
+$text-dark: $secondary;
 
 $light:   #FCFCFC;
 $dark: #2E2E2E;
 $muted:   #666666;
 
-$primary: #64F1FA;
-$secondary: $dark;
 
 $success: #60D138;
 $danger: #FF7777;
 $warning: #FF8A00;
 $info: #0d6efd;
+
+$gradient-primary: linear-gradient(304deg, rgba(45, 129, 255, 1),rgba(130, 227, 233, 1));
 
 $placeholder: #dbdbdb;
 
