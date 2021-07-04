@@ -427,10 +427,12 @@
         line-height: 1.3;
         color: #666666;
     }
+
     &__bottom-img {
+        width: 20rem;
         position: absolute;
-        bottom: -3.9rem;
-        left:-1.25rem;
+        bottom: 0;
+        right: 0;
         z-index: -1;
     }
 }
@@ -445,40 +447,21 @@
 
 
 .s6 {
-    position: relative;
-    background-color: #1A203E;
-    padding-top: 3.375rem;
-    box-shadow: 0px 4px 81px rgba(120, 247, 255, 0.61);
+    
     
     &__title {
-        color: white;
         
     }
 
     &__info {
-        width: 17.1875rem;
-        color: white;
-        font-weight: 300;
-        font-size: 15px;
-        line-height: 21px;
-        margin-top: 1.3125rem;
+       
     }
     &__ctn {
-        z-index: 2;
     }
 
-    &__bg-img {
-        z-index: -1;
-        position: absolute;
-        top: -30rem;
-    }
-
+   
     &__projects-title {
-        background: linear-gradient(273.63deg, #2D81FF 28.44%, #82E3E9 100%);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-
-
+       
     }
 }
 
