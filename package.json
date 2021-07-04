@@ -85,5 +85,4 @@
     "src/img/**/*.svg",
     "src/styles/**/*.{sass,scss}"
   ]
-
 }
