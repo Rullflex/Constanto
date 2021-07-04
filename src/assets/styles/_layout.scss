@@ -447,22 +447,32 @@
 
 
 .s6 {
-    
-    
-    &__title {
-        
-    }
+    background: #1E2547;
+    box-shadow: 0px 4px 81px rgba(120, 247, 255, 0.61);
 
-    &__info {
-       
-    }
     &__ctn {
+        padding-top: 3.125rem;
+    }
+    
+    &__quality-block {
+
+        color: $text-light;
     }
 
-   
-    &__projects-title {
-       
+    &__quality-title {
+        margin-bottom: 0.625rem;
     }
+
+    &__quality-subtitle {
+        font-weight: 300;
+        line-height: 1.339;
+        margin-bottom: 1.875rem;
+    }
+
+    &__quality- {}
+
+    &__quality- {}
+
 }
 
 

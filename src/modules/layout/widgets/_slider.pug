@@ -1,9 +1,25 @@
+//- Slider template
+
+mixin slider(baseClass = 'slider')
+	div(class=`${baseClass}` data-uk-slider)
+		.uk-slider-container(class=`${baseClass}-container`) 
+			ul.uk-slider-items(class=`${baseClass}-items`) 
+				block
+
+		+slider-dotnav(class=`${baseClass}-dotnav`) 
+
+
+
+//- DOTNAV
+
 mixin slider-dotnav
 	ul.dotnav.uk-slider-nav&attributes(attributes)
 
 mixin slideshow-dotnav
 	ul.dotnav.uk-slideshow-nav&attributes(attributes)
 
+
+//- SLIDENAV
 
 mixin slider-slidenav
 	ul.slidenav&attributes(attributes)
@@ -23,7 +39,7 @@ mixin slideshow-slidenav
 			a.slidenav__link.slidenav__link--next(href="#")
 				+icon('angle-right').slidenav__icon
 
-
+//- THUBMNAV
 
 mixin slider-thumbnav(length, imgSrc = `${assets}slider-thumb-img-`)
 	ul.thumbnav&attributes(attributes)

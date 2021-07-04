@@ -66,15 +66,13 @@ block content
 			.container.s3__ctn 
 				h2.s3__title Посмотрите креативы, которые мы делаем с&nbsp;командой:
 
-				.s3__slider(data-uk-slider)
-					.s3__slider-container.uk-slider-container 
-						ul.s3__slider-items.uk-slider-items 
-							- for(var i = 1; i <= 6; i++)
-								li.s3__slider-item
-									+icon('phone-mask').s3__slider-item-phone
-									.s3__slider-item-image
-										+picture(jpg, `${assets}s3-i${i}`, 'n')
-					+slider-dotnav.s3__slider-dotnav
+				+slider('s3__slider')
+					- for(var i = 1; i <= 6; i++)
+						li.s3__slider-item
+							+icon('phone-mask').s3__slider-item-phone
+							
+							.s3__slider-item-image
+								+picture(jpg, `${assets}s3-i${i}`, 'n')
 
 				button.btn.btn-solid-primary Оставить заявку
 
@@ -135,8 +133,9 @@ block content
 
 		section.s6
 			.s6__ctn.container
-				h2.s6__title Качество контента
-				p.s6__subtitle Мы предоставляем стильный дизайн креативов с проработанными текстами на основе болей и потребностей вашей аудитории, что позволяет добиться более высокой эффективности
+				.s6__quality-block
+					h2.s6__quality-title Качество контента
+					p.s6__quality-subtitle Мы предоставляем стильный дизайн креативов с проработанными текстами на основе болей и потребностей вашей аудитории, что позволяет добиться более высокой эффективности
 				
 				
 				button.btn.btn-solid-primary Оставить заявку
