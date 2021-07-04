@@ -22,19 +22,12 @@ $relative-link-to-modules: "../fonts";
 
 // Circe
 
-@include font-face("Circe", "Circe-Light", "300", "normal", $relative-link-to-modules);
+// @include font-face("Circe", "Circe-Light", "300", "normal", $relative-link-to-modules);
 
-@include font-face("Circe", "Circe-Regular", "400", "normal", $relative-link-to-modules);
+// @include font-face("Circe", "Circe-Regular", "400", "normal", $relative-link-to-modules);
 
-// @include font-face("F", "F-Medium", "500", "normal", $relative-link-to-modules);
+// @include font-face("Circe", "Circe-Bold", "700", "normal", $relative-link-to-modules);
 
-// @include font-face("F", "F-SemiBold", "600", "normal", $relative-link-to-modules);
-
-@include font-face("Circe", "Circe-Bold", "700", "normal", $relative-link-to-modules);
-
-// @include font-face("F", "F-ExtraBold", "800", "normal", $relative-link-to-modules);
-
-// @include font-face("F", "F-Black", "900", "normal", $relative-link-to-modules);
 
 
 

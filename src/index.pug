@@ -70,7 +70,7 @@ block content
 					- for(var i = 1; i <= 6; i++)
 						li.s3__slider-item
 							+icon('phone-mask').s3__slider-item-phone
-							
+
 							.s3__slider-item-image
 								+picture(jpg, `${assets}s3-i${i}`, 'n')
 
@@ -132,20 +132,169 @@ block content
 
 
 		section.s6
+			+picture(jpg, `${assets}s6-bg`, 'xsml').s6__bg 
 			.s6__ctn.container
 				.s6__quality-block
 					h2.s6__quality-title Качество контента
 					p.s6__quality-subtitle Мы предоставляем стильный дизайн креативов с проработанными текстами на основе болей и потребностей вашей аудитории, что позволяет добиться более высокой эффективности
+
+					+slider('s6__quality-slider')
+						- for(var i = 1; i <= 4; i++)
+							li.s6__quality-slider-item
+								+picture(jpg, `${assets}s6-content-i1`, 'n')
 				
-				
-				button.btn.btn-solid-primary Оставить заявку
+					button.btn.btn-solid-primary Оставить заявку
+
+
 				h2.s6__projects-title Клиентские проекты, с которыми мы работаем более 6 месяцев:
 
+				+slider('s6__projects-slider')
+					- for(var i = 1; i <= 7; i++)
+						li.s6__projects-slider-item
 
-		section.s7
+		section.s7 
 			.s7__ctn.container
 				h2.s7__title Больше за меня скажут мои клиенты:
-				h2.s7__order-title Последовательность действий в начале сотрудничества
+
+				+slider('s7__slider')
+					- for(var i = 1; i <= 4; i++)
+						li.s7__slider-item
+							+icon('phone-mask').s7__slider-item-phone
+
+							.s7__slider-item-image
+								+picture(jpg, `${assets}s7-projects-i${i}`, 'n')
+
+							+icon('yt-play').s7__slider-item-play
+
 		section.s8 
-			.s8__ctn.container
-				+picture-min(png, `${assets}s8-bg`, `${assets}s8-bg`, 'sm').s8__bg-img
+			.s8__ctn.container 
+				h2.s8__title Последовательность действий в начале сотрудничества
+
+				-
+					var list = [
+						{
+							number: '01',
+							dayText: 'день',
+							title: 'Проведение интервью и&nbsp;его перевод в&nbsp;документ',
+							list: null
+						},
+						{
+							number: '02',
+							dayText: 'день',
+							title: 'Исследование ваших конкурентов',
+							list: [
+								'Проработка портрета и&nbsp;поведения вашей целевой аудитории',
+								'Построение стратегии воронки продаж',
+							]
+						},
+						{
+							number: '04',
+							dayText: 'день',
+							title: 'Создание и проработка текстов под аудиторию',
+							list: null
+						},
+						{
+							number: '05',
+							dayText: 'день',
+							title: 'Согласование готовых материалов для запуска рекламы',
+							list: [
+								'Настройка рекламного кабинета',
+								'Подключение всех сервисов и ссылок',
+								'Запуск рекламной кампании',
+							]
+						},
+						{
+							number: '06',
+							dayText: 'день',
+							title: 'Получение первых заявок',
+							list: [
+								'Тестируем рекламную кампанию',
+								'Оптимизируем аудитории',
+							]
+						},
+						{
+							number: 'с14',
+							dayText: 'дня',
+							title: 'Привлекаем качественные и&nbsp;регулярные заявки по&nbsp;минимальной цене',
+							list: null
+						},
+					]
+
+				.s8__scrollable-block
+					each item, idx in list
+						.s8__item
+							.s8__item-left
+								.s8__item-number= item.number
+								.s8__item-day-text= item.dayText
+							.s8__item-right
+								.s8__item-title!= item.title 
+								if item.list
+									ul.s8__item-list
+										each listItem in item.list 
+											li!= listItem
+
+		section.s9 
+			.container.s9__ctn 
+				+picture-min(jpg, `${assets}s9-bg`, `${assets}s9-bg`, 'xsmlb').s9__bg
+
+				.s9__conditions-block
+					h2.s9__title Условия нашего сотрудничества
+
+					.s9__conditions-list
+						.s9__conditions-item
+							+icon('duration').s9__conditions-icon
+							.s9__conditions-text Длительность#[br] #[spam.s9__conditions-text--underline 1 месяц]
+						.s9__conditions-item
+							+icon('30k').s9__conditions-icon
+							.s9__conditions-text Рекламный бюджет #[spam.s9__conditions-text--underline от 30 000 ₽ / месяц]
+						.s9__conditions-item
+							+icon('eye').s9__conditions-icon
+							.s9__conditions-text Креативы #[spam.s9__conditions-text--underline включены в&nbsp;стоимость услуг]
+						.s9__conditions-item
+							+icon('30circle').s9__conditions-icon
+							.s9__conditions-text Стоимость#[br] #[spam.s9__conditions-text--underline 30 000 ₽ / месяц]
+						.s9__conditions-item
+							+icon('rocketbox').s9__conditions-icon
+							.s9__conditions-text Время на #[spam.s9__conditions-text--underline запуск 5 дней] после оплаты
+						.s9__conditions-item
+							+icon('complock').s9__conditions-icon
+							.s9__conditions-text #[spam.s9__conditions-text--underline Все материалы остаются] у вас 
+
+		section.s10 
+			.s10__ctn.container 
+				h2.s10__title #[span.s10__title--gradient 5 простых шагов для начала сотрудничества] и получения заявок в ваш проект #[span.s10__title--underline уже через 7 дней]
+
+				.s10__items-block
+					.s10__item
+						.s10__item-number 01
+						.s10__item-text Оставьте заявку на сайте
+					.s10__item
+						.s10__item-number 02
+						.s10__item-text Я вам перезваниваю и задаю небольшой список вопросов по вашему бизнесу, чтобы выяснить все потребности и понять, насколько все реализуемо
+					.s10__item
+						.s10__item-number 03
+						.s10__item-text На следующий день мы созваниваемся, и я презентую предложение решения вашей задачи
+					.s10__item
+						.s10__item-number 04
+						.s10__item-text Определяемся с бюджетом, сроками и другими условиями сотрудничества
+					.s10__item
+						.s10__item-number 05
+						.s10__item-text Подписываем договор, вы проводите оплату, и мы начинаем работать
+		.footbg
+			.footbg__bg
+				+picture(jpg, `${assets}s11_footer-bg`, 'xsmlb')
+			section.s11 
+				.s11__ctn.container 
+					h2.s11__title Часто задаваемые вопросы
+
+					ul.s11__tabs(data-uk-accordion)
+						li.s11__tab-item 
+							a.s11__tab-title.uk-accordion-title(href="#") С какими нишами я работаю?
+							.s11__tab-content.uk-accordion-content Я вам перезваниваю и задаю небольшой список вопросов по вашему бизнесу, чтобы выяснить все потребности и понять, насколько все реализуемо
+						li.s11__tab-item 
+							a.s11__tab-title.uk-accordion-title(href="#") С какими нишами я работаю?
+							.s11__tab-content.uk-accordion-content Я вам перезваниваю и задаю небольшой список вопросов по вашему бизнесу, чтобы выяснить все потребности и понять, насколько все реализуемо
+						li.s11__tab-item 
+							a.s11__tab-title.uk-accordion-title(href="#") С какими нишами я работаю?
+							.s11__tab-content.uk-accordion-content Я вам перезваниваю и задаю небольшой список вопросов по вашему бизнесу, чтобы выяснить все потребности и понять, насколько все реализуемо
+
