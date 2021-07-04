@@ -43,16 +43,10 @@
 }
 
 html {
-    @include aFontMob(16);
+    @include aFontMob(16, 480);
 }
 
-@media (min-width: map-get($grid-breakpoints, md)) {
-    html {
-        font-size: 24px;
-    }
-}
-
-@media (min-width: map-get($grid-breakpoints, lg)) {
+@media (min-width: map-get($grid-breakpoints, sm)) {
     html {
         font-size: 16px;
     }
