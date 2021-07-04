@@ -169,7 +169,53 @@
     }
 }
 
-@media (min-width: map-get($grid-breakpoints, sm)) {}
+@media (min-width: map-get($grid-breakpoints, sm)) {
+    .s1 {
+        height: 52rem;
+        &__title {
+            font-size: 2.8125rem;
+        }
+        &__subtitle {
+            font-size: 1.125rem;
+        }
+        &__img-man {
+            width: 35rem;
+            left: -4rem;
+            top: 12rem;
+        }
+        &__circle {
+            width: 33rem;
+            height: 33rem;
+            top: 19rem;
+        }
+        &__man-name {
+            font-size: 1.4375rem;
+            left: 15rem;
+            top: 22rem;
+        }
+        &__man-position {
+            left: 15rem;
+            top: 25rem;
+            font-size: .78125rem;
+        }
+        &__target-gradient {
+            font-size: 1rem;
+            width: 21.875rem;
+            margin-top: 6rem;
+            margin-bottom: .5rem;
+        }
+        &__target-text {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+        &__numbers-block {
+            flex-direction: row;
+            height: 8rem;
+            width: 30rem;
+            top: 51rem;
+        }
+    }
+}
 
 @media (min-width: map-get($grid-breakpoints, md)) {}
 
@@ -259,7 +305,48 @@
 
 }
 
-@media (min-width: map-get($grid-breakpoints, sm)) {}
+@media (min-width: map-get($grid-breakpoints, sm)) {
+
+    .s2 {
+        &__ctn {
+            padding-top: 15rem;
+        }
+        &__title {
+            font-size: 1.75rem;
+        }
+        &__chart-title {
+            font-size: 2.1875rem;
+            width: 16.625rem;
+        }
+        &__chart-descr {
+            font-size: 1.25rem;
+            width: 24.1625rem
+        }
+        &__chart-svg {
+            width: 20.0625rem;
+            top: 17rem;
+            left: 5rem;
+        }
+        &__list {
+            &-before {
+                transform: scale(1.2);
+                left: 3rem;
+            }
+            &-title {
+                font-size: 1.875rem;
+                margin-left: 4rem;
+            }
+            &-descr {
+                font-size: 1.125rem;
+                margin-left: 4rem;
+                width: 13.125rem;
+            }
+            &-item {
+                margin-bottom: 3rem;
+            }
+        }
+    }
+}
 
 @media (min-width: map-get($grid-breakpoints, md)) {}
 
@@ -321,7 +408,16 @@
 
 }
 
-@media (min-width: map-get($grid-breakpoints, sm)) {}
+@media (min-width: map-get($grid-breakpoints, sm)) {
+    .s3 {
+        &__title {
+            font-size: 1.73rem;
+        }
+         button {
+            margin: 0 auto;
+        }
+    }
+}
 
 @media (min-width: map-get($grid-breakpoints, md)) {}
 
@@ -380,7 +476,35 @@
     }
 }
 
-@media (min-width: map-get($grid-breakpoints, sm)) {}
+@media (min-width: map-get($grid-breakpoints, sm)) {
+    .s4 {
+        &__title {
+            font-size: 1.75rem;
+        }
+        &__subtitle {
+            font-size: 1.125rem;
+        }
+        &__block-title {
+            font-size: 1.5625rem;
+            width: 25rem;
+        }
+        &__block-list {
+            font-size: 1rem;
+             li {
+                margin-bottom: 1rem;
+            }
+        }
+        &__block-image {
+            margin: 0 auto;
+            display: block;
+        }
+        &__block-title {
+            font-size: 1.5625rem;
+            width: 20rem;
+            margin-top: 8rem;
+        }
+    }
+}
 
 @media (min-width: map-get($grid-breakpoints, md)) {}
 
@@ -437,7 +561,29 @@
     }
 }
 
-@media (min-width: map-get($grid-breakpoints, sm)) {}
+@media (min-width: map-get($grid-breakpoints, sm)) {
+    .s5 {
+        &__title {
+            font-size: 1.75rem;
+            margin-top: 5rem;
+        }
+        &__item {
+            width: 15rem;
+            
+        }
+        &__item-title {
+            font-size: 1.25rem;
+        }
+        &__item-descr {
+            font-size: 1rem;
+        }
+        &__items-wrap {
+            * {
+                display: block;
+            }
+        }
+    }
+}
 
 @media (min-width: map-get($grid-breakpoints, md)) {}
 
