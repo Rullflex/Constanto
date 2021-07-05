@@ -23,7 +23,7 @@ block content
 					.s1__target-text на которой мы разберем рекламную кампанию и стратегию продвижения вашего бизнеса
 					button.s1__target-btn.btn.btn-solid-primary Записаться
 
-				.s1__bottom-gradient
+				+picture(png, `${assets}s1-botgr`, 'xsml').s1__botgr
 
 				.s1__numbers-block
 					.s1__numbers-item
@@ -93,8 +93,8 @@ block content
 					+picture-min(png, `${assets}s4-i1`, `${assets}s4-i1`, 'xs').s4__block-image.s4__block-image-1
 
 				.s4__block.s4__block-2
-					.s4__block-title В итоге вы нервничаете и&nbsp;не знаете, что делать
-					ul.s4__block-list 
+					.s4__block-title.s4__block-title-2 В итоге вы нервничаете и&nbsp;не знаете, что делать
+					ul.s4__block-list.s4__block-list-2 
 						li Чтобы минимизировать риск нарваться на&nbsp;подобные ситуации, вы обращаетесь к&nbsp;вашим знакомым, которые могут порекомендовать хорошего специалиста
 						li Но если такой возможности не предоставляется, вам приходится искать нового специалиста самостоятельно
 						li Из-за чего перед вами встает вопрос: какого специалиста выбрать, чтобы он качественно предоставил услугу и не обманул вас
@@ -130,7 +130,7 @@ block content
 						.s5__item-title Unit-#[br]экономика
 						.s5__item-descr Считаю и анализирую самый главный показатель - окупаемость рекламной кампании, чтобы вы точно знали, сколько потратили на привлечениека ждого пользователя и сколько с него заработали
 					
-				+picture(png, `${assets}s5-botimg`, 'xs').s5__bottom-img
+				+picture(png, `${assets}s5-botimg`, 'xsml').s5__bottom-img
 
 
 		section.s6
@@ -148,7 +148,10 @@ block content
 					button.btn.btn-solid-primary Оставить заявку
 
 
-				h2.s6__projects-title Клиентские проекты, с которыми мы работаем более 6 месяцев:
+				h2.s6__projects-title 
+					span.s6__proj-title-1 Клиентские проекты, 
+					span.s6__proj-title-2 с 
+					span которыми мы работаем более 6 месяцев:
 
 				+slider('s6__projects-slider')
 					- for(var i = 1; i <= 7; i++)
