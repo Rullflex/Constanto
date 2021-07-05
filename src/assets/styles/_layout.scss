@@ -176,31 +176,55 @@
 
 @media (min-width: map-get($grid-breakpoints, sm)) {
     .s1 {
-        height: 52rem;
+        // height: 52rem;
+
+        &::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 21.5625rem;
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 104.23%);
+            z-index: -1;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+
+        &__ctn {
+            padding-top: 0;
+            padding-bottom: 2.35rem;
+        }
+
+        &__bg {
+            top: -7.1875rem;
+            height: calc(100% + 7.1875rem);
+        }
+
         &__title {
             font-size: 2.8125rem;
         }
         &__subtitle {
             font-size: 1.125rem;
+            margin-bottom: 18.7rem;
         }
         &__img-man {
-            width: 35rem;
+            width: 35.4rem;
             left: -4rem;
-            top: 12rem;
+            top: 10.2rem;
         }
         &__circle {
-            width: 33rem;
-            height: 33rem;
-            top: 19rem;
+            width: 35rem;
+            height: 35rem;
+            top: 17rem;
         }
         &__man-name {
             font-size: 1.4375rem;
-            left: 15rem;
-            top: 22rem;
+            left: 15.8rem;
+            top: 19.4rem;
         }
         &__man-position {
-            left: 15rem;
-            top: 25rem;
+            left: 15.9rem;
+            top: 22.7rem;
             font-size: .78125rem;
         }
         &__target-gradient {
@@ -211,13 +235,14 @@
         }
         &__target-text {
             font-size: 1rem;
-            margin-bottom: 1rem;
+            margin-bottom: 1.6rem;
         }
         &__numbers-block {
             flex-direction: row;
             height: 8rem;
             width: 30rem;
-            top: 51rem;
+            top: unset;
+            bottom: -8rem;
         }
         &__botgr {
             width: 48rem;
