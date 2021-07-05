@@ -991,7 +991,67 @@
 
     &__title {
         color: $text-light;
+        margin-bottom: 1.2rem;
     }
+
+    &__tabs {
+
+    }
+
+    &__tab-item {
+        color: $text-light;
+        line-height: 1.179;
+        margin-top: 0 !important;
+    }
+
+    &__tab-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.5rem 0;
+
+        color: $text-light;
+        font-size: 1.0625rem;
+
+        position: relative;
+
+        &::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 1px;
+            background: $gradient-primary;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        &:hover, &:focus {
+            color: inherit;
+
+            @media (min-width: map-get($grid-breakpoints, lg)) {
+                @include gradient-text;
+            }
+        }
+
+        &[aria-expanded=true] {
+            .s11__tab-plus {
+                transform: rotate(45deg);
+            }
+        }
+    }
+
+    &__tab-content {
+        margin-top: 0rem;
+        padding-bottom: 0.8rem;
+    }
+
+    &__tab-plus {
+        flex-shrink: 0;
+        width: 1.875rem;
+        transition: $transition--fast;
+    }
+
 }
 
 
@@ -1005,7 +1065,110 @@
 
 .s12 {
     &__ctn {
-        padding-top: 3.125rem;
+        padding-top: 2.625rem;
+        padding-bottom: 1.25rem;
+    }
+
+    &__title {
+        color: $text-light;
+        margin-bottom: 0.6875rem;
+    }
+
+    &__subtitle {
+        font-weight: 300;
+        color: $text-light;
+        line-height: 1.34;
+        margin-bottom: 2.4375rem;
+    }
+
+    // FORM
+
+    &__form {
+        padding: 1.875rem 0.9375rem 2.75rem;
+        width: 17.5rem;
+        
+        background: #FFFFFF;
+        box-shadow: 0px 4px 42px rgba(35, 74, 90, 0.37);
+        border-radius: 0.4375rem;
+    }
+
+    &__form-title {
+        font-weight: bold;
+        font-size: 1.4375rem;
+        line-height: 1em;
+        margin-bottom: 1.25rem;
+    }
+
+    &__form-input-wrap {
+        margin-bottom: 0.5rem;
+    }
+
+    &__form-submit-btn {
+        width: 100%;
+        font-size: 1rem;
+        line-height: 3.75rem;
+        margin-top: 1rem;
+        margin-bottom: 0.8rem;
+    }
+
+    &__form-submit-agreement {
+        text-align: center;
+        font-size: 0.8125rem;
+        line-height: 1.34;
+        color: #A09191;
+
+        a {
+            color: #2D81FF;
+            text-decoration: underline;
+            transition: $transition--hover;
+
+            @media (min-width: map-get($grid-breakpoints, lg)) {
+                &:hover {
+                    color: link-hover(#2D81FF);
+                }
+            }
+        }
+    }
+
+    // contacts
+
+    &__contacts {
+        margin-top: 2.5rem;
+        &-title {
+            font-weight: bold;
+            font-size: 1.4375rem;
+            line-height: 1.2;
+            color: $text-light;
+
+            margin-bottom: 0.8rem;
+        }
+
+        &-subtitle {
+            width: 14rem;
+            font-weight: 300;
+            line-height: 1.4;
+            color: $text-light;
+            margin-bottom: 1.9rem;
+        }
+
+        &-social-links {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.8rem;
+
+            a {
+                display: flex;
+                margin-right: 1.2625rem;
+            }
+
+            svg {
+                width: 2.3125rem;
+            }
+        }
+
+        &-btn {
+            width: 12.0625rem;
+        }
     }
 }
 
@@ -1018,6 +1181,36 @@
 
 @media (min-width: map-get($grid-breakpoints, xl)) {}
 
+.footer {
+    &__ctn {
+        padding-top: 1.5625rem;
+        padding-bottom: 2.1875rem;
+    }
+
+    &__logo {
+        &-icon {
+            width: 10.1875rem;
+        }
+    }
+
+    &__policy {
+        font-size: 14px;
+        line-height: 1.34;
+        color: $text-light;
+
+        margin-top: 1.1875rem;
+
+        &-link {
+            display: block;
+
+            @media (min-width: map-get($grid-breakpoints, lg)) {
+                &:hover {
+                    color: link-hover($primary);
+                }
+            }
+        }
+    }
+}
 
 @media (min-width: map-get($grid-breakpoints, sm)) {}
 
@@ -1028,29 +1221,4 @@
 @media (min-width: map-get($grid-breakpoints, xl)) {}
 
 
-@media (min-width: map-get($grid-breakpoints, sm)) {}
-
-@media (min-width: map-get($grid-breakpoints, md)) {}
-
-@media (min-width: map-get($grid-breakpoints, lg)) {}
-
-@media (min-width: map-get($grid-breakpoints, xl)) {}
-
-
-@media (min-width: map-get($grid-breakpoints, sm)) {}
-
-@media (min-width: map-get($grid-breakpoints, md)) {}
-
-@media (min-width: map-get($grid-breakpoints, lg)) {}
-
-@media (min-width: map-get($grid-breakpoints, xl)) {}
-
-
-@media (min-width: map-get($grid-breakpoints, sm)) {}
-
-@media (min-width: map-get($grid-breakpoints, md)) {}
-
-@media (min-width: map-get($grid-breakpoints, lg)) {}
-
-@media (min-width: map-get($grid-breakpoints, xl)) {}
 

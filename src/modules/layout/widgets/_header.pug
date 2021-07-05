@@ -42,8 +42,7 @@ mixin header-menu
 header.header 
     .container 
         .header__row 
-            a.header__logo
-                +icon('logo')
+            .header__logo: +icon('logo')
 
             +headerLinksList.d-none.d-lg-flex
 

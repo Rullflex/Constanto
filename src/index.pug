@@ -245,22 +245,22 @@ block content
 					.s9__conditions-list
 						.s9__conditions-item
 							+icon('duration').s9__conditions-icon
-							.s9__conditions-text Длительность#[br] #[spam.s9__conditions-text--underline 1 месяц]
+							.s9__conditions-text Длительность#[br] #[span.s9__conditions-text--underline 1 месяц]
 						.s9__conditions-item
 							+icon('30k').s9__conditions-icon
-							.s9__conditions-text Рекламный бюджет #[spam.s9__conditions-text--underline от 30 000 ₽ / месяц]
+							.s9__conditions-text Рекламный бюджет #[span.s9__conditions-text--underline от 30 000 ₽ / месяц]
 						.s9__conditions-item
 							+icon('eye').s9__conditions-icon
-							.s9__conditions-text Креативы #[spam.s9__conditions-text--underline включены в&nbsp;стоимость услуг]
+							.s9__conditions-text Креативы #[span.s9__conditions-text--underline включены в&nbsp;стоимость услуг]
 						.s9__conditions-item
 							+icon('30circle').s9__conditions-icon
-							.s9__conditions-text Стоимость#[br] #[spam.s9__conditions-text--underline 30 000 ₽ / месяц]
+							.s9__conditions-text Стоимость#[br] #[span.s9__conditions-text--underline 30 000 ₽ / месяц]
 						.s9__conditions-item
 							+icon('rocketbox').s9__conditions-icon
-							.s9__conditions-text Время на #[spam.s9__conditions-text--underline запуск 5 дней] после оплаты
+							.s9__conditions-text Время на #[span.s9__conditions-text--underline запуск 5 дней] после оплаты
 						.s9__conditions-item
 							+icon('complock').s9__conditions-icon
-							.s9__conditions-text #[spam.s9__conditions-text--underline Все материалы остаются] у вас 
+							.s9__conditions-text #[span.s9__conditions-text--underline Все материалы остаются] у вас 
 
 		section.s10 
 			.s10__ctn.container 
@@ -292,11 +292,66 @@ block content
 					ul.s11__tabs(data-uk-accordion)
 						li.s11__tab-item 
 							a.s11__tab-title.uk-accordion-title(href="#") С какими нишами я работаю?
+								+icon('plus').s11__tab-plus
 							.s11__tab-content.uk-accordion-content Я вам перезваниваю и задаю небольшой список вопросов по вашему бизнесу, чтобы выяснить все потребности и понять, насколько все реализуемо
 						li.s11__tab-item 
-							a.s11__tab-title.uk-accordion-title(href="#") С какими нишами я работаю?
+							a.s11__tab-title.uk-accordion-title(href="#") Заключается ли договор?
+								+icon('plus').s11__tab-plus
 							.s11__tab-content.uk-accordion-content Я вам перезваниваю и задаю небольшой список вопросов по вашему бизнесу, чтобы выяснить все потребности и понять, насколько все реализуемо
 						li.s11__tab-item 
-							a.s11__tab-title.uk-accordion-title(href="#") С какими нишами я работаю?
+							a.s11__tab-title.uk-accordion-title(href="#") Как устроена оплата?
+								+icon('plus').s11__tab-plus
 							.s11__tab-content.uk-accordion-content Я вам перезваниваю и задаю небольшой список вопросов по вашему бизнесу, чтобы выяснить все потребности и понять, насколько все реализуемо
+						li.s11__tab-item 
+							a.s11__tab-title.uk-accordion-title(href="#") Какой нужен бюджет на рекламную кампанию?
+								+icon('plus').s11__tab-plus
+							.s11__tab-content.uk-accordion-content Я вам перезваниваю и задаю небольшой список вопросов по вашему бизнесу, чтобы выяснить все потребности и понять, насколько все реализуемо
+						li.s11__tab-item 
+							a.s11__tab-title.uk-accordion-title(href="#") Почему другие таргетологи ставят цену ниже?
+								+icon('plus').s11__tab-plus
+							.s11__tab-content.uk-accordion-content Я вам перезваниваю и задаю небольшой список вопросов по вашему бизнесу, чтобы выяснить все потребности и понять, насколько все реализуемо
+
+			section.s12
+				.s12__ctn.container 
+					h2.s12__title Обсудим ваш проект?
+					p.s12__subtitle Закажите бесплатный аудит, в&nbsp;котором вы получите решение для&nbsp;конкретно вашей задачи
+
+					.s12__form-wrap
+						//- тут подложку на адптиве
+						form.s12__form
+							p.s12__form-title Заполните форму и&nbsp;я&nbsp;свяжусь с вами
+
+							.s12__form-input-wrap.input-wrap 
+								label.input-label(for="#s12-input-name") Введите ваше имя
+								input.s12__form-input.input(id="s12-input-name" type="text" name="Имя")
+
+							.s12__form-input-wrap.input-wrap 
+								label.input-label(for="#s12-input-tel") Введите ваш номер телефона
+								input.s12__form-input.input(id="s12-input-tel" type="tel" name="Телефон")
+							
+							.s12__form-submit-block
+								button.s12__form-submit-btn.btn.btn-solid-primary(type="submit") Отправить заявку
+								.s12__form-submit-agreement Нажимая кнопку вы принимаете #[a(href=privacyLink) условия обработки информации]
+
+					.s12__contacts
+						.s12__contacts-title Остались #[br]вопросы?
+						.s12__contacts-subtitle Свяжитесь со мной удобным для вас способом:
+
+						.s12__contacts-social-links
+							a(href=waLink, target="_blank", rel="noopener noreferrer"): +icon('wa')
+							a(href=tgLink, target="_blank", rel="noopener noreferrer"): +icon('tg')
+							a(href=instLink, target="_blank", rel="noopener noreferrer"): +icon('inst')
+
+						button.s12__contacts-btn.btn.btn-outline-primary Обратный звонок
+
+			footer.footer 
+				.footer__ctn.container 
+					.footer__logo: +icon('logo').footer__logo-icon
+					.footer__policy
+						a(href=privacyLink).footer__policy-link Политика конфиденциальности
+						p.footer__policy-rights © 2021 Все права защищены.
+
+
+
+
 
