@@ -48,11 +48,22 @@
 .dotnav {
     display: flex;
     justify-content: center;
+
     li {
+    
         width: 1.25rem;
         cursor: pointer;
         flex: none;
         padding: 0.3rem 0.125rem;
+
+        @media (min-width: map-get($grid-breakpoints, sm)) {
+            width: 1.5625rem;
+        }
+
+        @media (min-width: map-get($grid-breakpoints, md)) {
+            width: 3.125rem;
+        }
+
         a {
             display: block;
             width: 100%;
@@ -81,8 +92,7 @@
             }
         }
     }
-    &--white {}
-    &--yellow {}
+
 }
 
 

@@ -48,9 +48,15 @@
         font-size: 1.125rem;
         letter-spacing: 0.03em;
 
-        @media (min-width: map-get($grid-breakpoints, md)) {}
-        @media (min-width: map-get($grid-breakpoints, lg)) {}
-        @media (min-width: map-get($grid-breakpoints, xl)) {}
+        @media (min-width: map-get($grid-breakpoints, md)) {
+            width: 16.25rem;
+        }
+
+        @media (min-width: map-get($grid-breakpoints, xl)) {
+            width: 12.0625rem;
+            line-height: 3.125rem;
+            font-size: 1rem;
+        }
       
     }
 
