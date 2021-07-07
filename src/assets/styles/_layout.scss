@@ -257,9 +257,12 @@
 
 @media (min-width: map-get($grid-breakpoints, md)) {
     .s1:after {
-        background: none;
+        content: none;
     }
     .s1 {
+        &__ctn {
+            padding-bottom: 10.8rem;
+        }
         &__title {
             font-size: 3.4375rem;
         }
@@ -316,7 +319,7 @@
             &-block {
                 width: 100%;
                 height: 13rem;
-                top: 550px;
+                bottom: -5.4rem;
             }
             &-item {
                 width: 326.12px; 
@@ -338,7 +341,6 @@
     .s1 {
         &__title {
             width: 36rem;
-            margin-top: 1rem;
             word-spacing: -0.1rem;
         }
         &__subtitle {
@@ -558,16 +560,23 @@
 @media (min-width: map-get($grid-breakpoints, md)) {
     
     .s2 {
+        &__ctn {
+            padding-top: 13.1rem;
+        }
         &__title {
             width: 602px;
             margin-left: 5.2rem;
             font-size: 39px;
-            margin-top: 6.1rem;
+        }
+        &__list {
+            margin-bottom: 5.8rem;
         }
         &__chart {
             &-block {
+                padding: 2.5375rem 0 0 1.1625rem;
                 height: 23.5rem;
                 margin-top: -1.5rem;
+                margin-bottom: -10.3125rem;
             }
             &-title {
                 font-size: 2.1875rem;
@@ -729,10 +738,13 @@
 
 @media (min-width: map-get($grid-breakpoints, md)) {
     .s3 {
+        &__ctn {
+            padding-top: 18.8rem;
+            padding-bottom: 3.8rem;
+        }
         &__title {
             font-size: 2.4375rem;
             width: 39rem;
-            margin-top: 1.2rem;
             margin-left: 2.8rem;
         }
         &__slider {
@@ -844,9 +856,11 @@
 
 @media (min-width: map-get($grid-breakpoints, md)) {
     .s4 {
+        &__ctn {
+            padding-top: 4.2rem;
+        }
         &__title {
             font-size: 2.4375rem;
-            margin-top: 1rem;
             margin-left: .2rem;
         }
         &__subtitle {
@@ -879,9 +893,10 @@
             &-list-2 {
                 margin-left: 23.5rem;
                 margin-top: 2rem;
-                width: 23.75rem;
+                width: 23.25rem;
             }
             &-image-1 {
+                width: 23.7rem;
                 margin-top: -23.2rem;
                 margin-left: 22rem;
             }
@@ -1011,11 +1026,65 @@
 
 @media (min-width: map-get($grid-breakpoints, md)) {
     .s5 {
+        &__ctn {
+            padding-top: 2.3rem;
+            padding-bottom: 8.4rem;
+        }
         &__title {
             font-size: 2.4375rem;
-            margin-top: 7.4rem;
             width: 40.4375rem;
             margin-left: 2.7rem;
+            margin-bottom: 4.4rem;
+        }
+        &__items-wrap {
+            padding-left: 0.5rem;
+            justify-content: space-between;
+        }
+        &__item {
+            padding-top: 1rem;
+            width: 22.175rem;
+            margin-bottom: 3.5rem;
+
+            &-1 {
+                padding-top: 0;
+                width: 21.825rem;
+            }
+
+            &-2 {
+                .s5__item-icon {
+                    left: 8.6rem;
+                }
+            }
+
+            &-3 {
+                width: 20.825rem;
+                order: 3;
+            }
+
+            &-4 {
+                .s5__item-icon {
+                    left: 8.6rem;
+                }
+                order: 4;
+            }
+
+            &-5 {
+                width: 21.9375rem;
+            }
+        }
+        &__item-icon {
+            width: 4.7rem;
+            top: -2rem;
+            left: 12.3rem;
+        }
+        &__item-title {
+            height: unset;
+            font-size: 1.4375rem;
+            margin-bottom: 1rem;
+        }
+        &__item-descr {
+            font-size: 1.125rem;
+            width: unset;
         }
     }
 }
@@ -1296,7 +1365,7 @@
                 margin-left: 3rem;
             }
             &-slider {
-                margin-top: 4.5rem;
+                margin-top: 5.1rem;
                 &-item {
                     height: 30.8rem;
                     width: 45.5rem;
@@ -1315,7 +1384,7 @@
         }
         button {
             margin-top: -.6rem;
-            margin-left: 16rem;
+            margin-left: 0;
         }
         &__projects-title {
             font-size: 2.4375rem;
