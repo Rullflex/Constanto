@@ -1,4 +1,16 @@
 .s1 {
+    &::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 18.375rem;
+        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 104.23%);
+        z-index: -1;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
     &__ctn {
         padding-top: 1.4rem;
         padding-bottom: 7.1875rem;
@@ -176,20 +188,9 @@
 
 @media (min-width: map-get($grid-breakpoints, sm)) {
     .s1 {
-        // height: 52rem;
-
         &::after {
-            content: '';
-            display: block;
-            width: 100%;
             height: 21.5625rem;
-            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 104.23%);
-            z-index: -1;
-            position: absolute;
-            left: 0;
-            bottom: 0;
         }
-
         &__ctn {
             padding-top: 0;
             padding-bottom: 2.35rem;
@@ -204,6 +205,7 @@
             font-size: 2.8125rem;
         }
         &__subtitle {
+            width: 23.5rem;
             font-size: 1.125rem;
             margin-bottom: 18.7rem;
         }
@@ -239,10 +241,10 @@
         }
         &__numbers-block {
             flex-direction: row;
-            height: 8rem;
+            height: 8.4rem;
             width: 30rem;
             top: unset;
-            bottom: -8rem;
+            bottom: -8.4rem;
         }
         &__botgr {
             width: 48rem;
@@ -527,7 +529,12 @@
             top: 17rem;
             left: 5rem;
         }
+        &__chart-block {
+            padding: 3.4375rem 0 0 1.1625rem;
+            margin-bottom: -7.725rem;
+        }
         &__list {
+            margin-bottom: 5.1rem;
             &-before {
                 left: 2.8rem;
                 width: 6.9rem;
@@ -704,6 +711,9 @@
 
 @media (min-width: map-get($grid-breakpoints, sm)) {
     .s3 {
+        &__ctn {
+            padding-top: 15rem;
+        }
         &__title {
             font-size: 1.73rem;
             margin-top: -.8rem;
@@ -818,12 +828,12 @@
             width: 20rem;
             margin-top: 1.2rem;
             &-2 {
-                margin-top: 5.2rem;
+                margin-top: 6.2rem;
             }
         }
         &__block-image {
             &-1 {
-                width: 24rem;
+                width: 23rem;
             }
             &-2 {
                 width: 27rem;
@@ -937,37 +947,59 @@
 
 @media (min-width: map-get($grid-breakpoints, sm)) {
     .s5 {
+        &__ctn {
+            padding-bottom: 7.1rem;
+        }
         &__title {
             font-size: 1.75rem;
-            margin-top: 5.6rem;
+            margin-top: 5.7rem;
+            margin-bottom: 3.6625rem;
+        }
+        &__items-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: space-between;
         }
         &__item {
-            width: 15rem;
+            width: 13.175rem;
+            margin-bottom: 3.5rem;
+
+            &-1 {
+                order: 1;
+            }
+
+            &-2 {
+                order: 2;
+            }
+
+            &-3 {
+                order: 4;
+            }
+
+            &-4 {
+                order: 3;
+            }
+
+            &-5 {
+                order: 5;
+            }
         }
-        &__item:nth-child(2) {
-            left: 15rem;
-            top: -11.25rem;
-        }
-        &__item:nth-child(3) {
-            left: 14.375rem;
-            top: -11.25rem;
-        }
-        &__item:nth-child(4) {
-            top: -28.75rem;
-        }
-        &__item:nth-child(5) {
-            top: -31.25rem;
+        &__item-icon {
+            top: -1.5625rem;
+            right: 0.8rem;
         }
         &__item-title {
+            height: 2.875rem;
+            display: flex;
+            align-items: center;
             font-size: 1.25rem;
+            margin-bottom: 1rem;
         }
         &__item-descr {
             font-size: 1rem;
             width: 13.125rem;
             line-height: 138%;
-        }
-        &__items-wrap {
-            height: 53rem;
         }
         &__bottom-img {
             width: 100%;
@@ -1155,10 +1187,11 @@
 
 
 @media (min-width: map-get($grid-breakpoints, sm)) {
-
     .s6 {
+        &__ctn {
+            padding-top: 6.3rem;
+        }
         &__quality-title {
-            margin-top: 2.6rem;
         }
         &__quality-slider-item {
             height: 27.8rem;
@@ -1173,10 +1206,10 @@
             }
         }
         &__quality-subtitle {
-            width: 23.3rem;
-            line-height: 146%;
+            font-size: 1.125rem;
+            margin-bottom: 1.5rem;
         }
-         button {
+        button {
             margin: 0 auto;
         }
         &__projects-title {
@@ -1374,7 +1407,8 @@
             font-size: 1.75rem;
         }
         &__slider-item {
-            width: 63%;
+            width: 17.5625rem;
+            height: 34.9375rem;
         }
         &__slider-dotnav {
             margin-top: 2.4rem;
@@ -1608,6 +1642,22 @@
             width: 94%;
             margin-top: 1.4rem;
             height: 49.7125rem;
+
+            position: relative;
+
+            &::before {
+                content: '';
+                display: block;
+                width: 27.5rem;
+                height: 46.625rem;
+                
+                background: #FFFFFF;
+                box-shadow: 0px 4px 42px rgba(35, 74, 90, 0.3);
+                border-radius: 0.4375rem;
+
+                @include center-item;
+                z-index: -2;
+            }
         }
         &__conditions-item {
             padding-left: 6.975rem;
@@ -1707,20 +1757,26 @@
 
 @media (min-width: map-get($grid-breakpoints, sm)) {
     .s10 {
-        padding-bottom: 1rem;
+        &__ctn {
+            padding-top: 2.8rem;
+            padding-bottom: 2.4rem;
+        }
         &__title {
             text-align-last: left;
             margin-left: 1.4rem;
-            font-size: 31px;
+            font-size: 2.0625rem;
             margin-top: .5rem;
             &--gradient {
                 font-size: 31px;
                 text-align-last: left;
             }
         }
+        &__item {
+            padding: 0.7rem 0 .8rem 2.8rem;
+        }
         &__items-block {
             margin-left: .4rem;
-            margin-top: 6rem;
+            margin-top: 5.5rem;
         }
         &__item-text {
             font-size: 1rem;
@@ -1834,11 +1890,13 @@
 
 @media (min-width: map-get($grid-breakpoints, sm)) {
     .s11 {
+        &__ctn {
+            padding-top: 2rem;
+        }
         &__title {
             font-size: 1.75rem;
             width: 18.75rem;
             margin-left: 1.2rem;
-            margin-top: -1rem;
         }
         &__tabs {
             margin-top: 2.4rem;
@@ -1846,6 +1904,7 @@
         &__tab-title {
             font-size: 25px;
             padding: .6rem 0;
+            line-height: 1.34;
             padding-left: 1.2rem;
             margin-right: 0.6rem;
         }
@@ -1989,16 +2048,24 @@
 
 @media (min-width: map-get($grid-breakpoints, sm)) {
     .s12 {
+        &__ctn {
+            padding-top: 3.125rem;
+            padding-bottom: 1.55rem;
+        }
+        &__contacts {
+            margin-top: 3rem;
+        }
         &__contacts-title {
+            font-size: 1.5625rem;
+            line-height: 1.1em;
             width: 5rem;
             margin-left: .1rem;
-            margin-top: 2.9rem;
         }
         &__contacts-subtitle {
             width: 13.4rem;
         }
         &__contacts-social-links {
-            margin-top: -7rem;
+            margin-top: -7.3rem;
             margin-left: 14.5rem;
         }
         &__contacts-btn {
