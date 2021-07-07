@@ -332,7 +332,68 @@
     }
 }
 
-@media (min-width: map-get($grid-breakpoints, lg)) {}
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .s1 {
+        &__title {
+            width: 36rem;
+            margin-top: 1rem;
+            word-spacing: -0.1rem;
+        }
+        &__subtitle {
+            font-size: 24px;
+            width: 30.5875rem;
+            line-height: 2rem;
+            margin-top: 1.3rem;
+            word-spacing: -.1rem;
+        }
+        &__img-man {
+            width: 628.8px;
+            height: 652.48px;
+            top:20px;
+            left:356px;
+        }
+        &__circle {
+            width: 728.12px;
+            height: 728.12px;
+            left: 406.5px;
+            top: 49.16px;
+
+        }
+        &__man-name {
+            font-size: 22px;
+            margin-left: 10.2rem;
+            margin-top: -1rem;
+        }
+        &__man-position {
+            font-size: 17px;
+            left: 44.9rem;
+            top: 12.1rem;
+            line-height: 1.4rem;
+        }
+        &__target {
+            &-gradient {
+                margin-top: -15.5rem;
+                margin-left: -39.5rem;
+                width: 330px;
+                text-align: right;
+                word-spacing: -.1rem;
+            }
+            &-text {
+                margin-left: -36.3rem;
+                line-height: 1.4rem;
+                text-align: left;
+                margin-top: -0.7rem;
+                word-spacing: -0.1rem;
+            }
+            &-block {
+                button {
+                    margin-top: 1.2rem;
+                    margin-left: -47.4rem;
+                }
+            }
+        }
+    }
+}
 
 @media (min-width: map-get($grid-breakpoints, xl)) {}
 
@@ -1723,7 +1784,7 @@
             font-size: 1.4375rem;
             line-height: 1.2;
             color: $text-light;
-
+            width: 5rem;
             margin-bottom: 0.8rem;
         }
 
@@ -1759,6 +1820,10 @@
 
 @media (min-width: map-get($grid-breakpoints, sm)) {
     .s12 {
+        &__contacts-title {
+            width: 5rem;
+
+        }
         &__title {
             font-size: 2.1875rem;
             margin-top: -.5rem;
