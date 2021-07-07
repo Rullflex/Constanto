@@ -253,9 +253,147 @@
     }
 }
 
-@media (min-width: map-get($grid-breakpoints, md)) {}
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .s1:after {
+        background: none;
+    }
+    .s1 {
+        &__title {
+            font-size: 3.4375rem;
+        }
+        &__subtitle {
+            font-size: 1.25rem;
+            width: 24.5875rem;
+            line-height: 1.8rem;
+        }
+        &__img-man {
+            width: 34.504375rem;
+            height: 34.323125rem;
+            left: 16rem;
+            top: 4.7rem;
+        }
+        &__circle {
+            width: 41.055rem;
+            height: 41.055rem;
+            top: 7.9rem;
+            left: 15rem;
+        }
+        &__man-name {
+            font-size: 1.125rem;
+            left: 34.8rem;
+            line-height: 1.3rem;
+            top: 11.4rem;
+        }
+        &__man-position {
+            font-size: .875rem;
+            left: 34.7rem;
+            top: 14.1rem;
+        }
+        &__target {
+            &-gradient {
+                padding: 0;
+                margin-top: -11rem;
+                margin-left: -25.1rem;
+                width: 327px;
+            }
+            &-text {
+                width: 366px;
+                margin-left: -21.7rem;
+                line-height: 1.7rem;
+                text-align: left;
+                margin-top: -.3rem;
+            }
+        }
+        button {
+            width: 13.125rem;
+            height: 4.0625rem;
+            margin-left: -32.4rem;
+            margin-top: -.7rem;
+        }
+        &__numbers {
+            &-block {
+                width: 100%;
+                height: 13rem;
+                top: 550px;
+            }
+            &-item {
+                width: 326.12px; 
+                background: none; 
+                height: 145.97px; 
+                padding-left: 3.2rem;
+            }
+            &-lg {
+                font-size: 3.875rem;
+            }
+            &-descr {
+                font-size: 1.4375rem;
+            }
+        }
+    }
+}
 
-@media (min-width: map-get($grid-breakpoints, lg)) {}
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .s1 {
+        &__title {
+            width: 36rem;
+            margin-top: 1rem;
+            word-spacing: -0.1rem;
+        }
+        &__subtitle {
+            font-size: 24px;
+            width: 30.5875rem;
+            line-height: 2rem;
+            margin-top: 1.3rem;
+            word-spacing: -.1rem;
+        }
+        &__img-man {
+            width: 628.8px;
+            height: 652.48px;
+            top:20px;
+            left:356px;
+        }
+        &__circle {
+            width: 728.12px;
+            height: 728.12px;
+            left: 406.5px;
+            top: 49.16px;
+
+        }
+        &__man-name {
+            font-size: 22px;
+            margin-left: 10.2rem;
+            margin-top: -1rem;
+        }
+        &__man-position {
+            font-size: 17px;
+            left: 44.9rem;
+            top: 12.1rem;
+            line-height: 1.4rem;
+        }
+        &__target {
+            &-gradient {
+                margin-top: -15.5rem;
+                margin-left: -39.5rem;
+                width: 330px;
+                text-align: right;
+                word-spacing: -.1rem;
+            }
+            &-text {
+                margin-left: -36.3rem;
+                line-height: 1.4rem;
+                text-align: left;
+                margin-top: -0.7rem;
+                word-spacing: -0.1rem;
+            }
+            &-block {
+                button {
+                    margin-top: 1.2rem;
+                    margin-left: -47.4rem;
+                }
+            }
+        }
+    }
+}
 
 @media (min-width: map-get($grid-breakpoints, xl)) {}
 
@@ -390,7 +528,91 @@
     }
 }
 
-@media (min-width: map-get($grid-breakpoints, md)) {}
+@media (min-width: map-get($grid-breakpoints, md)) {
+    
+    .s2 {
+        &__title {
+            width: 602px;
+            margin-left: 5.2rem;
+            font-size: 39px;
+            margin-top: 6.1rem;
+        }
+        &__chart {
+            &-block {
+                height: 23.5rem;
+                margin-top: -1.5rem;
+            }
+            &-title {
+                font-size: 2.1875rem;
+                width: 28rem;
+                margin-top: 1.4rem;
+                margin-left: 1.4rem;
+            }
+            &-descr {
+                margin-top: 1.4rem;
+                margin-left: 1.5rem;
+                width: 26rem;
+            }
+            &-svg {
+                top: 8rem;
+                left: 20.7rem;
+            }
+        }
+        &__list {
+             &-before {
+                width: 10rem;
+                height: 7.0625rem;
+                left: -22px;
+                top: -12px;
+
+                &-3 {
+                    top: -1.5rem;
+                    left: 22rem;
+                }
+                &-4 {
+                    left: 21.9rem;
+                    top: -1.8rem;
+                }
+             }
+             &-title {
+                 font-size: 2.0625rem;
+                 &-1 {
+                    margin-left: .5rem; 
+                    margin-top: 2.8rem;
+                 }
+                 &-2 {
+                    margin-left: .6rem; 
+                 }
+                 &-3 {
+                    margin-top: -17.7rem; 
+                    margin-left: 24.1rem;
+                 }
+                 &-4 {
+                    margin-left: 24rem;
+                 }
+             }
+             &-descr {
+                 font-size: 1.125rem;
+
+
+                 &-1 {
+                    margin-left: .5rem;
+                }
+                &-2 {
+                    margin-left: .6rem;
+                }
+                &-3 {
+                    margin-left: 24.2rem; 
+                    margin-top: -.2rem;
+                }
+                &-4 {
+                    margin-left: 24rem;
+                }
+             }
+        }
+    }
+    
+}
 
 @media (min-width: map-get($grid-breakpoints, lg)) {}
 
@@ -465,7 +687,22 @@
     }
 }
 
-@media (min-width: map-get($grid-breakpoints, md)) {}
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .s3 {
+        &__title {
+            font-size: 2.4375rem;
+            width: 39rem;
+            margin-top: 1.2rem;
+            margin-left: 2.8rem;
+        }
+        &__slider {
+            margin-top: -2.4rem;
+        }
+        button {
+            margin-top: -.6rem;
+        }
+    }
+}
 
 @media (min-width: map-get($grid-breakpoints, lg)) {}
 
@@ -565,7 +802,56 @@
     }
 }
 
-@media (min-width: map-get($grid-breakpoints, md)) {}
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .s4 {
+        &__title {
+            font-size: 2.4375rem;
+            margin-top: 1rem;
+            margin-left: .2rem;
+        }
+        &__subtitle {
+            width: 30.1875rem;
+            margin-top: -.1rem;
+            margin-left: 8rem;
+            text-align: center;
+        }
+        &__block {
+            &-title-1 {
+                font-size: 1.8125rem;
+                width: 22rem;
+                margin-top: 3rem;
+            }
+            &-title-2 {
+                font-size: 29px;
+                margin-left: 23.5rem;
+                margin-top: 2.5rem;
+                width: 22rem;
+            }
+            &-title {
+                font-size: 29px;
+                width: 22rem;
+                margin-top: 3rem;
+            }
+            &-list {
+                width: 20.625rem;
+                line-height: 1.4rem;
+            }
+            &-list-2 {
+                margin-left: 23.5rem;
+                margin-top: 2rem;
+                width: 23.75rem;
+            }
+            &-image-1 {
+                margin-top: -23.2rem;
+                margin-left: 22rem;
+            }
+            &-image-2 {
+                margin-top: -26.5rem;
+                margin-left: -3rem;
+            }
+        }
+    }
+}
 
 @media (min-width: map-get($grid-breakpoints, lg)) {}
 
@@ -661,7 +947,16 @@
     }
 }
 
-@media (min-width: map-get($grid-breakpoints, md)) {}
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .s5 {
+        &__title {
+            font-size: 2.4375rem;
+            margin-top: 7.4rem;
+            width: 40.4375rem;
+            margin-left: 2.7rem;
+        }
+    }
+}
 
 @media (min-width: map-get($grid-breakpoints, lg)) {}
 
@@ -873,7 +1168,59 @@
     }
 }
 
-@media (min-width: map-get($grid-breakpoints, md)) {}
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .s6 {
+        &__bg {
+            height: 111.5rem;
+            top:-1.5625rem;
+        }
+        padding-bottom: 4.35rem;
+        &__quality {
+            &-title {
+                font-size: 1.8125rem;
+                margin-left: -22.6rem;
+                margin-top: 1.4rem;
+            }
+            &-subtitle {
+                font-size: 1.25rem;
+                width: 43.75rem;
+                margin-left: 3rem;
+            }
+            &-slider {
+                margin-top: 4.5rem;
+            }
+            &-slider-dotnav {
+                margin-top: 4.7rem;
+                margin-left: 2.4rem;
+                li {
+                    width: 3.425rem;
+                }
+            }
+        }
+        button {
+            margin-top: -.6rem;
+            margin-left: 16rem;
+        }
+        &__projects-title {
+            font-size: 2.4375rem;
+            margin-left: .7rem;
+            margin-top: 7.5rem;
+        }
+        &__proj-title-1 {
+            margin-right: 0;
+        }
+        &__projects-slider-item {
+            width: 52%;
+            margin-right:2rem;
+        }
+        &__projects-slider-dotnav {
+            margin-top: 2.43rem;
+            li {
+                width: 3.425rem;
+            }
+        }
+    }
+}
 
 @media (min-width: map-get($grid-breakpoints, lg)) {}
 
@@ -950,7 +1297,26 @@
     }
 }
 
-@media (min-width: map-get($grid-breakpoints, md)) {}
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .s7 {
+        &__title {
+            font-size: 2.4375rem;
+            margin-top: 4.5rem;
+            margin-left: 0.3rem;
+            width: 739px;
+        }
+        &__slider-item {
+            width: 39%;
+            height: 35.9375rem;
+        }
+        &__slider-dotnav {
+            li {
+                width: 3.395rem;
+            }
+            margin-top: 1.6rem;
+        }
+    }
+}
 
 @media (min-width: map-get($grid-breakpoints, lg)) {}
 
@@ -1059,7 +1425,21 @@
     }
 }
 
-@media (min-width: map-get($grid-breakpoints, md)) {}
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .s8{
+        padding-bottom: 1rem;
+        &__title {
+            margin-top: .6rem;
+            font-size: 2.4375rem;
+            margin-left: 6.2rem;
+            width: 37.6875rem;
+        }
+        &__item-title {
+            width: 190px;
+            margin-top: .1rem;
+        }
+    }
+}
 
 @media (min-width: map-get($grid-breakpoints, lg)) {}
 
@@ -1152,7 +1532,36 @@
     }
 }
 
-@media (min-width: map-get($grid-breakpoints, md)) {}
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .s9 {
+        &__bg {
+            width: 48.0625rem;
+        }
+        &__title {
+            margin-bottom: 2.4875rem;
+            font-size: 2.125rem;
+            width: 32rem;
+            margin-left: 2.9rem;
+            margin-top: -.4rem;
+        
+        }
+        &__conditions-list {
+            text-align: left;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            padding-left: 1rem;
+            flex-direction:row;
+        }
+        &__conditions-block {
+            height: 32.7125rem;
+            width: 82%;
+        }
+        &__conditions-item {
+            width: 17.25rem;
+        }
+    }
+}
 
 @media (min-width: map-get($grid-breakpoints, lg)) {}
 
@@ -1226,7 +1635,25 @@
     }
 }
 
-@media (min-width: map-get($grid-breakpoints, md)) {}
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .s10 {
+        padding-bottom: 2.2rem;
+        &__title {
+            width: 428px;
+            text-align: left;
+            margin-left: 5.9rem;
+            margin-top: -.8rem;
+            line-height: 3rem;
+        }
+        &__items-block {
+            margin-left: 5.2rem;
+            margin-top: 3.4rem;
+        }
+        &__item {
+            margin-bottom: 0.4rem;
+        }
+    }
+}
 
 @media (min-width: map-get($grid-breakpoints, lg)) {}
 
@@ -1334,7 +1761,23 @@
     }
 }
 
-@media (min-width: map-get($grid-breakpoints, md)) {}
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .s11 {
+        &__title {
+            font-size: 39px;
+            width: 33.75rem;
+            margin-left: 5.2rem;
+            margin-top: .7rem;
+        
+        }
+        &__tab-title {
+            font-size: 29px;
+            padding: 1.05rem 0;
+            padding-left: 0rem;
+            margin-right: .6rem;
+        }
+    }
+}
 
 @media (min-width: map-get($grid-breakpoints, lg)) {}
 
@@ -1416,7 +1859,7 @@
             font-size: 1.4375rem;
             line-height: 1.2;
             color: $text-light;
-
+            width: 5rem;
             margin-bottom: 0.8rem;
         }
 
@@ -1452,6 +1895,10 @@
 
 @media (min-width: map-get($grid-breakpoints, sm)) {
     .s12 {
+        &__contacts-title {
+            width: 5rem;
+
+        }
         &__title {
             font-size: 2.1875rem;
             margin-top: -.5rem;
@@ -1479,7 +1926,84 @@
     }
 }
 
-@media (min-width: map-get($grid-breakpoints, md)) {}
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .s12 {
+        &__contacts-title {
+            margin-top: -31.8rem;
+            margin-left: 3rem;
+            font-size: 1.5625rem;
+        }
+        &__contacts-subtitle {
+            margin-left: 3rem;
+            margin-top: -.9rem;
+        }
+        &__contacts-social-links {
+            margin-left: 3rem;
+        }
+        &__contacts-btn {
+            margin-left: 3rem;
+            margin-top: 1.3rem;
+        }
+        &__title {
+            font-size: 39px;
+            margin-top: 0.5rem;
+            margin-left: -13.6rem;
+        }
+        &__subtitle {
+            font-size: 25px;
+            margin-top: 1rem;
+            margin-left: 2.5rem;
+            word-spacing: -.21rem;
+            width: 36rem;
+        }
+        &__form {
+            margin-top: 2.3rem;
+            width: 26rem;
+            padding: 2.575rem 3.4375rem 2.75rem;
+            margin-left: 19.4rem;
+            height: 31.1rem;
+            &-title {
+                font-size: 35px;
+                width: 21rem;
+                margin-left: -.8rem;
+                margin-top:-.2rem;
+            }
+            &-submit-block {
+                button {
+                    width: 20rem;
+                    margin-left: -.4rem;
+                }
+            }
+            &-submit-agreement {
+                margin-left: 2.5rem;
+            }
+            &-input {
+                width: 321.49px;
+                height: 60px;
+                margin-left:-.4rem;
+                &-wrap {
+                    margin-top: .8rem;
+                    margin-left: -.1rem;
+                }
+
+                &-1 {
+                    margin-top: -.2rem;
+                    label {
+                        margin-top: .6rem;
+                        margin-left: -.4rem;
+                        word-spacing: -.1rem;
+                    }
+                }
+                &-2 {
+                    label {
+                        margin-left: -.3rem;
+                    }
+                }
+
+            }
+        }
+    }
+}
 
 @media (min-width: map-get($grid-breakpoints, lg)) {}
 
@@ -1518,7 +2042,16 @@
 
 @media (min-width: map-get($grid-breakpoints, sm)) {}
 
-@media (min-width: map-get($grid-breakpoints, md)) {}
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .footer {
+        &__logo {
+            margin-top: 6.6rem;
+        }
+        &__policy {
+            margin-top: 2.7rem;
+        }
+    }
+}
 
 @media (min-width: map-get($grid-breakpoints, lg)) {}
 
