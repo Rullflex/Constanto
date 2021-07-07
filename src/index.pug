@@ -38,20 +38,20 @@ block content
 				.s2__list 
 					.s2__list-item
 						img(src=`${assets}s2-i1.svg`, alt="").s2__list-before
-						.s2__list-title 20 проектов
-						.s2__list-descr реализовано в разных нишах
+						.s2__list-title.s2__list-title-1 20 проектов
+						.s2__list-descr.s2__list-descr-1 реализовано в разных нишах
 					.s2__list-item
 						img(src=`${assets}s2-i2.svg`, alt="").s2__list-before
-						.s2__list-title от 60 ₽
-						.s2__list-descr стоимость заявки
+						.s2__list-title.s2__list-title-2 от 60 ₽
+						.s2__list-descr.s2__list-descr-2 стоимость заявки
 					.s2__list-item
-						img(src=`${assets}s2-i3.svg`, alt="").s2__list-before
-						.s2__list-title более 4млн. ₽
-						.s2__list-descr рекламного бюджета доверено
+						img(src=`${assets}s2-i3.svg`, alt="").s2__list-before.s2__list-before-3
+						.s2__list-title.s2__list-title-3 более 4млн. ₽
+						.s2__list-descr.s2__list-descr-3 рекламного бюджета доверено
 					.s2__list-item
-						img(src=`${assets}s2-i4.svg`, alt="").s2__list-before
-						.s2__list-title более 6 мес.
-						.s2__list-descr в среднем работают со&nbsp;мной
+						img(src=`${assets}s2-i4.svg`, alt="").s2__list-before.s2__list-before-4
+						.s2__list-title.s2__list-title-4 более 6 мес.
+						.s2__list-descr.s2__list-descr- в среднем работают со&nbsp;мной
 
 				.s2__chart-block
 					.s2__chart-ibg
@@ -239,7 +239,6 @@ block content
 		section.s9 
 			.container.s9__ctn 
 				+picture-min(jpg, `${assets}s9-bg`, `${assets}s9-bg`, 'xsmlb').s9__bg
-
 				.s9__conditions-block
 					h2.s9__title Условия нашего сотрудничества
 
@@ -322,11 +321,11 @@ block content
 						form.s12__form
 							p.s12__form-title Заполните форму и&nbsp;я&nbsp;свяжусь с вами
 
-							.s12__form-input-wrap.input-wrap 
+							.s12__form-input-wrap.input-wrap.s12__form-input-1
 								label.input-label(for="#s12-input-name") Введите ваше имя
 								input.s12__form-input.input(id="s12-input-name" type="text" name="name")
 
-							.s12__form-input-wrap.input-wrap 
+							.s12__form-input-wrap.input-wrap.s12__form-input-2
 								label.input-label(for="#s12-input-tel") Введите ваш номер телефона
 								input.s12__form-input.input(id="s12-input-tel" type="tel" name="phone")
 							
@@ -335,7 +334,7 @@ block content
 								.s12__form-submit-agreement Нажимая кнопку вы принимаете #[a(href=privacyLink) условия обработки информации]
 
 					.s12__contacts
-						.s12__contacts-title Остались #[br]вопросы?
+						.s12__contacts-title Остались вопросы?
 						.s12__contacts-subtitle Свяжитесь со мной удобным для вас способом:
 
 						.s12__contacts-social-links
