@@ -141,7 +141,7 @@ block content
 					+slider('s6__quality-slider')
 						- for(var i = 1; i <= 4; i++)
 							li.s6__quality-slider-item
-								+picture(jpg, `${assets}s6-content-i${i}`, 'xm')
+								+picture(png, `${assets}s6-content-i${i}`, 'xm')
 				
 					button.btn.btn-solid-primary Оставить заявку
 
@@ -152,8 +152,87 @@ block content
 					span которыми мы работаем более 6 месяцев:
 
 				+slider('s6__projects-slider')
-					- for(var i = 1; i <= 7; i++)
-						li.s6__projects-slider-item
+					li.s6__projects-slider-item
+						.s6__projects-slider-logo
+							+picture(png, `${assets}s6-project-i1`, 'n')
+						.s6__projects-slider-subscribers 4800+#[br] подписчиков
+						.s6__projects-slider-title Школа худ. гимнастики "Без Границ" в СПб
+						a(href="#").btn.s6__projects-slider-link @sport_bezgranitc
+						ul.s6__projects-slider-list
+							li.s6__projects-slider-list-item Получили целевые заявки по&nbsp;345&nbsp;₽ на пробное занятие на&nbsp;онлайн и оффлайн-направления
+
+						button().s6__projects-slider-btn-more.btn.btn-solid-primary Подробнее
+
+					li.s6__projects-slider-item
+						.s6__projects-slider-logo
+							+picture(png, `${assets}s6-project-i2`, 'n')
+						.s6__projects-slider-subscribers 10 000+#[br] подписчиков
+						.s6__projects-slider-title Роллер-школа в СПб и&nbsp;Москве
+						a(href="#").btn.s6__projects-slider-link @skate_town_spb
+						a(href="#").btn.s6__projects-slider-link @skate_town_msk
+						ul.s6__projects-slider-list
+							li.s6__projects-slider-list-item Получили 1400+ заявок по&nbsp;470&nbsp;₽ на&nbsp;пробное индивидуальное занятие стоимостью 750 ₽ с квиз-сайта и лендинга
+
+						button().s6__projects-slider-btn-more.btn.btn-solid-primary Подробнее
+
+					li.s6__projects-slider-item
+						.s6__projects-slider-logo
+							+picture(png, `${assets}s6-project-i3`, 'n')
+						.s6__projects-slider-subscribers 1800+#[br] подписчиков
+						.s6__projects-slider-title Услуги по реставрации кухонь в&nbsp;Канаде
+						a(href="#").btn.s6__projects-slider-link @konstantin_udalov_ca
+						ul.s6__projects-slider-list
+							li.s6__projects-slider-list-item Получили 590+ заявок на услуги по&nbsp;реставрации кухни по&nbsp;615&nbsp;₽ 
+							li.s6__projects-slider-list-item Реклама хорошо себя показала, и клиент принял решение масштабироваться на&nbsp;второй город
+
+						button().s6__projects-slider-btn-more.btn.btn-solid-primary Подробнее
+
+					li.s6__projects-slider-item
+						.s6__projects-slider-logo
+							+picture(png, `${assets}s6-project-i4`, 'n')
+						.s6__projects-slider-subscribers 7200+#[br] подписчиков
+						.s6__projects-slider-title Школа Бачаты в СПб
+						a(href="#").btn.s6__projects-slider-link @red_dance_school
+						ul.s6__projects-slider-list
+							li.s6__projects-slider-list-item Начали получать от 10 обращений в&nbsp;день на парные и сольные направления от&nbsp;60&nbsp;₽ за заявку
+							li.s6__projects-slider-list-item Стабильный поток заявок и новых клиентов позволил клиенту расширить свой бизнес: сейчас открываются новые залы и группы
+
+						button().s6__projects-slider-btn-more.btn.btn-solid-primary Подробнее
+
+					li.s6__projects-slider-item
+						.s6__projects-slider-logo
+							+picture(png, `${assets}s6-project-i5`, 'n')
+						.s6__projects-slider-subscribers 87 300+#[br] подписчиков
+						.s6__projects-slider-title Школа Вокала Яна&nbsp;Марти в&nbsp;Москве
+						a(href="#").btn.s6__projects-slider-link @yan_marti
+						ul.s6__projects-slider-list
+							li.s6__projects-slider-list-item Получили 131 заявку по&nbsp;187&nbsp;₽ на&nbsp;бесплатное пробное занятие
+
+						button().s6__projects-slider-btn-more.btn.btn-solid-primary Подробнее
+						
+					li.s6__projects-slider-item
+						.s6__projects-slider-logo
+							+picture(png, `${assets}s6-project-i6`, 'n')
+						.s6__projects-slider-subscribers 6800+#[br] подписчиков
+						.s6__projects-slider-title Глэмпинг #[br]в Ленобласти
+						a(href="#").btn.s6__projects-slider-link @glamp_camp
+						ul.s6__projects-slider-list
+							li.s6__projects-slider-list-item Привлекли в&nbsp;Instagram более 6 000 живой аудитории при средней стоимости подписчика 24&nbsp;₽ в&nbsp;течение 5 месяцев ведения рекламы
+
+						button().s6__projects-slider-btn-more.btn.btn-solid-primary Подробнее
+
+					li.s6__projects-slider-item
+						.s6__projects-slider-logo
+							+picture(png, `${assets}s6-project-i7`, 'n')
+						.s6__projects-slider-subscribers 1800+#[br] подписчиков
+						.s6__projects-slider-title Аренда складов- контейнеров в СПб
+						a(href="#").btn.s6__projects-slider-link @get_sklad
+						ul.s6__projects-slider-list
+							li.s6__projects-slider-list-item На протяжение 7 месяцев ведения рекламы получали заявки по&nbsp;430&nbsp;₽ через квиз-сайт
+
+						button().s6__projects-slider-btn-more.btn.btn-solid-primary Подробнее
+
+
 
 		section.s7 
 			.s7__ctn.container

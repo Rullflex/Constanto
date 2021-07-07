@@ -41,8 +41,12 @@
 
     }
 
+    &__menu-container {
+        padding: 0;
+    }
+
     &__menu-links {
-        text-align: right;;
+        text-align: right;
     }
 
     &__links {
@@ -58,7 +62,13 @@
     &__li {
         margin-bottom: 1.0625rem;
         
+        @media (min-width: map-get($grid-breakpoints, sm)) {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+        
         @media (min-width: map-get($grid-breakpoints, lg)) {
+            font-size: 1rem;
             margin-bottom: 0;
         }
         
