@@ -31,27 +31,27 @@ block content
 						.s1__numbers-lg #[span.s1__numbers-lg--sm до] 10 раз
 						.s1__numbers-descr окупамемость затрат
 
-		section.s2 
+		section.s2#s2
 			.container.s2__ctn 
 				h2.s2__title Еще немного фактов и&nbsp;цифр обо мне и&nbsp;деятельности
 
 				.s2__list 
-					.s2__list-item
+					.s2__list-item.s2__list-item-1
 						img(src=`${assets}s2-i1.svg`, alt="").s2__list-before
 						.s2__list-title.s2__list-title-1 20 проектов
 						.s2__list-descr.s2__list-descr-1 реализовано в разных нишах
-					.s2__list-item
+					.s2__list-item.s2__list-item-2
 						img(src=`${assets}s2-i2.svg`, alt="").s2__list-before
 						.s2__list-title.s2__list-title-2 от 60 ₽
 						.s2__list-descr.s2__list-descr-2 стоимость заявки
-					.s2__list-item
+					.s2__list-item.s2__list-item-3
 						img(src=`${assets}s2-i3.svg`, alt="").s2__list-before.s2__list-before-3
 						.s2__list-title.s2__list-title-3 более 4млн. ₽
 						.s2__list-descr.s2__list-descr-3 рекламного бюджета доверено
-					.s2__list-item
+					.s2__list-item.s2__list-item-4
 						img(src=`${assets}s2-i4.svg`, alt="").s2__list-before.s2__list-before-4
 						.s2__list-title.s2__list-title-4 более 6 мес.
-						.s2__list-descr.s2__list-descr- в среднем работают со&nbsp;мной
+						.s2__list-descr.s2__list-descr-4 в среднем работают со&nbsp;мной
 
 				.s2__chart-block
 					.s2__chart-ibg
@@ -60,7 +60,7 @@ block content
 					.s2__chart-descr Качественно проработанный&nbsp;креатив — один из важнейших этапов для получения целевых заявок. 
 					+icon('chart-gradient').s2__chart-svg
 
-		section.s3 
+		section.s3#s3
 			.s3__bg
 				+picture(jpg, `${assets}s3-bg`, 'xsmlb')
 			.container.s3__ctn 
@@ -128,30 +128,29 @@ block content
 						.s5__item-title Unit-#[br.d-md-none]экономика
 						.s5__item-descr Считаю и анализирую самый главный показатель - окупаемость рекламной кампании, чтобы вы точно знали, сколько потратили на привлечениека ждого пользователя и сколько с него заработали
 					
-			+picture(png, `${assets}s5-botimg`, 'xsml').s5__bottom-img
+			+picture(jpg, `${assets}s5-botimg`, 'xsmlb').s5__bottom-img
 
 
-		section.s6
-			+picture(jpg, `${assets}s6-bg`, 'xsml').s6__bg 
+		section.s6#s6
+			+picture(jpg, `${assets}s6-bg`, 'xsmlb').s6__bg 
 			.s6__ctn.container
 				.s6__quality-block
+					.s6__quality-block-bg.d-none.d-xl-block 
+						+picture(jpg, `${assets}s6-q-bg`, 'n')
 					h2.s6__quality-title Качество контента
-					p.s6__quality-subtitle Мы предоставляем стильный дизайн креативов с&nbsp;проработанными текстами на основе болей и потребностей вашей аудитории, что позволяет добиться более высокой эффективности
+					p.s6__quality-subtitle Мы предоставляем стильный дизайн креативов#[br.d-none.d-lg-inline] с&nbsp;проработанными текстами на основе болей и потребностей вашей аудитории, что позволяет добиться более высокой эффективности
 
 					+slider('s6__quality-slider')
 						- for(var i = 1; i <= 4; i++)
 							li.s6__quality-slider-item
 								+picture(png, `${assets}s6-content-i${i}`, 'xm')
 				
-					button.btn.btn-solid-primary Оставить заявку
+					button.s6__quality-btn.btn.btn-solid-primary Оставить заявку
 
 
-				h2.s6__projects-title 
-					span.s6__proj-title-1 Клиентские проекты, 
-					span.s6__proj-title-2 с 
-					span которыми мы работаем более 6 месяцев:
+				h2.s6__projects-title Клиентские проекты, с&nbsp;которыми мы работаем более 6 месяцев:
 
-				+slider('s6__projects-slider')
+				mixin s6-slider-inner 
 					li.s6__projects-slider-item
 						.s6__projects-slider-logo
 							+picture(png, `${assets}s6-project-i1`, 'n')
@@ -232,25 +231,30 @@ block content
 
 						button().s6__projects-slider-btn-more.btn.btn-solid-primary Подробнее
 
+				+slider('s6__projects-slider').d-xl-none
+					+s6-slider-inner
 
+				.s6__projects-slider-wrap.d-none.d-xl-flex
+					+s6-slider-inner
 
-		section.s7 
+		section.s7#s7
 			.s7__ctn.container
 				h2.s7__title Больше за меня скажут мои клиенты:
 
 				+slider('s7__slider')
-					- for(var i = 1; i <= 4; i++)
+					- for(var i = 1; i <= 5; i++)
 						li.s7__slider-item
-							+icon('phone-mask').s7__slider-item-phone
+							.s7__slider-item-wrap
+								+icon('phone-mask').s7__slider-item-phone
 
-							.s7__slider-item-image
-								+picture(jpg, `${assets}s7-projects-i${i}`, 'n')
+								.s7__slider-item-image.s7__slider-item-image-1
+									+picture(jpg, `${assets}s7-projects-i${i}`, 'n')
 
-							+icon('yt-play').s7__slider-item-play
+								+icon('yt-play').s7__slider-item-play(data-uk-toggle="target: '.s7__slider-item-image iframe'")
 
-		section.s8 
+		section.s8#s8
 			.s8__ctn.container 
-				h2.s8__title Последовательность действий в начале сотрудничества
+				h2.s8__title Последовательность действий в&nbsp;начале сотрудничества
 
 				-
 					var list = [
@@ -317,7 +321,7 @@ block content
 
 		section.s9 
 			.container.s9__ctn 
-				+picture-min(jpg, `${assets}s9-bg`, `${assets}s9-bg`, 'xsmlb').s9__bg
+				+picture-min(jpg, `${assets}s9-bg`, `${assets}s9-bg`, 'xsml').s9__bg
 				.s9__conditions-block
 					h2.s9__title Условия нашего сотрудничества
 
@@ -361,10 +365,12 @@ block content
 					.s10__item
 						.s10__item-number 05
 						.s10__item-text Подписываем договор, вы проводите оплату, и мы начинаем работать
+
+				button.s10__button.btn.btn-solid-primary.d-none.d-lg-flex Начать работу
 		.footbg
 			.footbg__bg
 				+picture(jpg, `${assets}s11_footer-bg`, 'xsmlb')
-			section.s11 
+			section.s11#s11
 				.s11__ctn.container 
 					h2.s11__title Часто задаваемые вопросы
 
@@ -390,27 +396,27 @@ block content
 								+icon('plus').s11__tab-plus
 							.s11__tab-content.uk-accordion-content Я вам перезваниваю и задаю небольшой список вопросов по вашему бизнесу, чтобы выяснить все потребности и понять, насколько все реализуемо
 
-			section.s12
+			section.s12#s12
 				.s12__ctn.container 
+					.s12__ibg
+						+picture(jpg, `${assets}s6-q-bg`, 'n')
 					h2.s12__title Обсудим ваш проект?
 					p.s12__subtitle Закажите бесплатный аудит, в&nbsp;котором вы получите решение для&nbsp;конкретно вашей задачи
 
-					.s12__form-wrap
-						//- тут подложку на адптиве
-						form.s12__form
-							p.s12__form-title Заполните форму и&nbsp;я&nbsp;свяжусь с вами
+					form.s12__form
+						p.s12__form-title Заполните форму и&nbsp;я&nbsp;свяжусь с вами
 
-							.s12__form-input-wrap.input-wrap.s12__form-input-1
-								label.input-label(for="#s12-input-name") Введите ваше имя
-								input.s12__form-input.input(id="s12-input-name" type="text" name="name")
+						.s12__form-input-wrap.input-wrap.s12__form-input-1
+							label.input-label(for="#s12-input-name") Введите ваше имя
+							input.s12__form-input.input(id="s12-input-name" type="text" name="Имя")
 
-							.s12__form-input-wrap.input-wrap.s12__form-input-2
-								label.input-label(for="#s12-input-tel") Введите ваш номер телефона
-								input.s12__form-input.input(id="s12-input-tel" type="tel" name="phone")
-							
-							.s12__form-submit-block
-								button.s12__form-submit-btn.btn.btn-solid-primary(type="submit") Отправить заявку
-								.s12__form-submit-agreement Нажимая кнопку вы принимаете #[a(href=privacyLink) условия обработки информации]
+						.s12__form-input-wrap.input-wrap.s12__form-input-2
+							label.input-label(for="#s12-input-tel") Введите ваш номер телефона
+							input.s12__form-input.input.phone(id="s12-input-tel" type="tel" name="Телефон")
+						
+						.s12__form-submit-block
+							button.s12__form-submit-btn.btn.btn-solid-primary(type="submit") Отправить заявку
+							.s12__form-submit-agreement Нажимая кнопку вы принимаете #[a(href=privacyLink) условия обработки информации]
 
 					.s12__contacts
 						.s12__contacts-title Остались вопросы?

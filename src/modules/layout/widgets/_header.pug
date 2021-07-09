@@ -2,34 +2,34 @@
     var linksList = [
         {
             title: 'Обо мне',
-            href: '#',
+            href: '#s2',
         },
         {
             title: 'Кейсы',
-            href: '#',
+            href: '#s3',
         },
         {
             title: 'Отзывы',
-            href: '#',
+            href: '#s7',
         },
         {
             title: 'Этапы работы',
-            href: '#',
+            href: '#s8',
         },
         {
             title: 'FAQ',
-            href: '#',
+            href: '#s11',
         },
         {
             title: 'Контакты',
-            href: '#',
+            href: '#s12',
         },
     ]
 
 mixin headerLinksList
     ul.header__links&attributes(attributes)
         each link, idx  in linksList
-            li.header__li: a.header__link(href=link.href title=link.title)= link.title
+            li.header__li: a.header__link(href=link.href title=link.title data-uk-scroll)= link.title
 
 mixin header-menu 
     .menu&attributes(attributes)

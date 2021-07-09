@@ -1,7 +1,7 @@
 //- Slider template
 
 mixin slider(baseClass = 'slider', options='')
-	div(class=`${baseClass}` data-uk-slider=options)
+	div(class=`${baseClass}` data-uk-slider=options)&attributes(attributes)
 		.uk-slider-container(class=`${baseClass}-container`) 
 			ul.uk-slider-items(class=`${baseClass}-items`) 
 				block

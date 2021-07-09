@@ -100,11 +100,11 @@ export const app = {
   },
 
   // поздагрузка YouTube видео внутрь блока только при его появлении
-  videoSpy(videoWrapper, YTid) {
-    const $videoWrapper = document.querySelector(videoWrapper);
+  videoSpy(video, YTid) {
+    const $videoWrapper = video;
     UIkit.scrollspy($videoWrapper);
     $videoWrapper.addEventListener(`inview`, (event) => {
-      $videoWrapper.insertAdjacentHTML(`beforeend`, this.loaderHtml);
+      // $videoWrapper.insertAdjacentHTML(`beforeend`, this.loaderHtml);
       $videoWrapper.insertAdjacentHTML(
         `beforeend`,
         `<iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/${YTid}" frameborder="0" allowfullscreen="true" data-uk-video data-uk-responsive"></iframe>`
@@ -310,7 +310,7 @@ export const form = {
         message: "^The passwords does not match",
       },
     },
-    name: {
+    Имя: {
       // You need to pick a username too
       presence: true,
       // And it must be between 3 and 20 characters long
@@ -359,7 +359,7 @@ export const form = {
         greaterThanOrEqualTo: 0,
       },
     },
-    phone: {
+    Телефон: {
       presence: true,
       isMaskComplete: true,
     },
@@ -372,6 +372,17 @@ export const form = {
   } = {}) {
     this.validateSubmit(form, onSuccess, onError);
     this.validateChange(form);
+    validate.validators.isMaskComplete = (value, options, key, attributes) => {
+      if (key == "Телефон" && options == true && value != null) {
+        if (app.phoneMask().checkCompleteness(value)) {
+          return null;
+        } else {
+          return "не корректен";
+        }
+      } else {
+        return null;
+      }
+    };
     this.phoneMask(form);
   },
 
