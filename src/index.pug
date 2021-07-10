@@ -65,14 +65,33 @@ block content
 				+picture(jpg, `${assets}s3-bg`, 'xsmlb')
 			.container.s3__ctn 
 				h2.s3__title Посмотрите креативы, которые мы делаем с&nbsp;командой:
-
+				-
+					const videos = [
+						'O97l4dlCl4c',
+						'ilka_m5tsjQ',
+						'034vDaTGlj8',
+						'KFIBqo2Jzrw',
+						'MfrYHpBrBFY',
+						'pJD5xIECyaI',
+						'_3lLIVaTuvs',
+						'MO8A6hMkjl0',
+						't7Z5akGyvU4',
+						'SdUsMehkyzo',
+						'PzVVKjW8sAw',
+						'3Y-6U2YgYk0',
+						'qj-g1eSeOUc',
+						'toaqOBFI8jg',
+					]
 				+slider('s3__slider')
-					- for(var i = 1; i <= 6; i++)
+					- for(var i = 1; i <= videos.length; i++)
 						li.s3__slider-item
 							+icon('phone-mask').s3__slider-item-phone
 
-							.s3__slider-item-image
+							a.s3__slider-item-image(href="#" data-uk-toggle="target: +; animation: uk-animation-fade")
 								+picture(jpg, `${assets}s3-i${i}`, 'n')
+
+								+icon('yt-play').s3__slider-item-play
+							iframe.s3__slider-item-video.s3__slider-item-image(hidden src=`https://www.youtube-nocookie.com/embed/${videos[i - 1]}?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1` width="100%" height="100%" frameborder="0" allowfullscreen uk-responsive uk-video="automute: false")
 
 				button.btn.btn-solid-primary Оставить заявку
 
@@ -241,16 +260,27 @@ block content
 			.s7__ctn.container
 				h2.s7__title Больше за меня скажут мои клиенты:
 
+				-
+					const videoIds = [
+						'Ej13OcxvGSk',
+						'6ZUYIoNZxX4',
+						'IGePPl1gBlM',
+						'VS5e5CLJ7tE',
+						'bqL7duGwUqo',
+					]
+
 				+slider('s7__slider')
-					- for(var i = 1; i <= 5; i++)
+					- for(var i = 1; i <= videoIds.length; i++)
 						li.s7__slider-item
 							.s7__slider-item-wrap
 								+icon('phone-mask').s7__slider-item-phone
 
-								.s7__slider-item-image.s7__slider-item-image-1
+								a.s7__slider-item-image(href="#" data-uk-toggle="target: +; animation: uk-animation-fade")
 									+picture(jpg, `${assets}s7-projects-i${i}`, 'n')
 
-								+icon('yt-play').s7__slider-item-play(data-uk-toggle="target: '.s7__slider-item-image iframe'")
+									+icon('yt-play').s7__slider-item-play
+								iframe.s7__slider-item-video.s7__slider-item-image(hidden src=`https://www.youtube-nocookie.com/embed/${videoIds[i - 1]}?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1` width="100%" height="100%" frameborder="0" allowfullscreen uk-responsive uk-video="automute: false")
+
 
 		section.s8#s8
 			.s8__ctn.container 

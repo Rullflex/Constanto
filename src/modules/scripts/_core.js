@@ -104,10 +104,10 @@ export const app = {
     const $videoWrapper = video;
     UIkit.scrollspy($videoWrapper);
     $videoWrapper.addEventListener(`inview`, (event) => {
-      // $videoWrapper.insertAdjacentHTML(`beforeend`, this.loaderHtml);
+      $videoWrapper.insertAdjacentHTML(`beforeend`, this.loaderHtml);
       $videoWrapper.insertAdjacentHTML(
         `beforeend`,
-        `<iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/${YTid}" frameborder="0" allowfullscreen="true" data-uk-video data-uk-responsive"></iframe>`
+        `<iframe src="https://www.youtube-nocookie.com/embed/${YTid}" frameborder="0" allowfullscreen="true" data-uk-video data-uk-responsive"></iframe>`
       );
     });
   },

@@ -2,6 +2,9 @@
     @media (min-width: map-get($grid-breakpoints, xl)) {
         background: #151D4F;
     }
+    &.uk-active {
+        background: rgba(#151D4F, 0.8);
+    }
     &__row {
         display: flex;
         justify-content: space-between;

@@ -6,10 +6,22 @@ UIkit.util.ready(function () {
 
   // FORM
   form.init("form");
+  UIkit.scrollspy(".s7");
+  document.querySelector(`.s7`).addEventListener("inview", (event) => {});
 
-  document.querySelectorAll(`.s7__slider-item-image`).forEach((el) => {
-    // app.videoSpy(el, "nVzA1uWTydQ");
-  });
+  const videoIds = [
+    "Ej13OcxvGSk",
+    "6ZUYIoNZxX4",
+    "IGePPl1gBlM",
+    "VS5e5CLJ7tE",
+    "bqL7duGwUqo",
+  ];
+  // document.querySelectorAll(`.s7__slider-item-video`).forEach((el, idx) => {
+  //   el.insertAdjacentHTML(
+  //     `beforeend`,
+  //     `<iframe src="https://www.youtube-nocookie.com/embed/${videoIds[idx]}?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1" width="100%" height="100%" frameborder="0" allowfullscreen uk-responsive uk-video="automute: false hidden"></iframe>`
+  //   );
+  // });
 
   // app.letListClickActive(document.querySelector(`ul.list`))
   // app.dynamicVideo()
