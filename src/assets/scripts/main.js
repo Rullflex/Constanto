@@ -9,6 +9,32 @@ UIkit.util.ready(function () {
   UIkit.scrollspy(".s7");
   document.querySelector(`.s7`).addEventListener("inview", (event) => {});
 
+  let sliderBtnMoreStateIndex = 0;
+  const blockBaseHeight = 694;
+  const blockFullHeight = 663;
+  const $sliderWrap = document.querySelector(`.s6__projects-slider-wrap`);
+  const $btnMore = document.querySelector(
+    `.s6__projects-slider-btn-more-cases`
+  );
+  $btnMore.addEventListener("click", (ev) => {
+    ev.preventDefault();
+    if (sliderBtnMoreStateIndex < 2) {
+      $sliderWrap.style.cssText = `height: ${
+        blockBaseHeight + blockFullHeight * (sliderBtnMoreStateIndex + 1)
+      }px`;
+
+      if (sliderBtnMoreStateIndex === 1) {
+        $btnMore.innerText = "Скрыть кейсы";
+      }
+
+      sliderBtnMoreStateIndex++;
+    } else {
+      $btnMore.innerText = "Посмотреть еще кейсы";
+      $sliderWrap.style.cssText = `height: ${blockBaseHeight}px`;
+      sliderBtnMoreStateIndex = 0;
+    }
+  });
+
   const videoIds = [
     "Ej13OcxvGSk",
     "6ZUYIoNZxX4",

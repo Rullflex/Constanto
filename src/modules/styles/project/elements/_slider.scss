@@ -3,10 +3,12 @@
  ========================================================================== */
 
 .slidenav {
-    width: 100%;
+    width: 1300px;
     display: flex;
     justify-content: space-between;
     pointer-events: none;
+    @include center-item-x;
+    top: 271px;
     &__item {}
     &__link {
         pointer-events: initial;
@@ -14,7 +16,9 @@
         &--prev {}
         &--next {}
     }
-    &__icon {}
+    &__icon {
+        width: 25px;
+    }
 }
 
 /* ========================================================================

@@ -263,6 +263,12 @@
         &__ctn {
             padding-bottom: 10.8rem;
         }
+        &__arrow {
+            width: 78px;
+            position: absolute;
+            top: 398px;
+            left: 245px;
+        }
         &__title {
             font-size: 3.4375rem;
         }
@@ -298,8 +304,8 @@
             &-gradient {
                 padding: 0;
                 margin-top: -11rem;
-                margin-left: -25.1rem;
-                width: 327px;
+                margin-left: -24.1rem;
+                width: 338px;
             }
             &-text {
                 width: 366px;
@@ -350,6 +356,12 @@
         &__ctn {
             padding-top: 1rem;
             padding-bottom: 9.9rem;
+        }
+        &__arrow {
+            width: 82px;
+            position: absolute;
+            top: 366px;
+            left: 245px;
         }
         &__title {
             width: 36rem;
@@ -449,6 +461,14 @@
             padding-top: 4.9rem;
             padding-bottom: 15.9rem;
         }
+        &__arrow {
+            width: 87px;
+            top: 389px;
+            left: 175px;
+            transform: rotate(
+        43deg
+        );
+        }
         &__title {
             width: 36rem;
             word-spacing: -0.1rem;
@@ -490,7 +510,7 @@
                 width: 330px;
             }
             &-text {
-                margin: 10px 0 0 213px;
+                margin: 4px 0 0 213px;
             }
             &-block {
                 align-items: flex-start;
@@ -594,7 +614,7 @@
 
     &__chart-title {
         font-weight: bold;
-        font-size: 2.1875rem;
+        font-size: 1.8rem;
         line-height: 1.139;
 
         margin-bottom: 0.6875rem;
@@ -825,6 +845,12 @@
             padding-top: 76px;
             padding-bottom: 80px;
         }
+        &__arrow {
+            position: absolute;
+            width: 104px;
+            top: 507px;
+            left: 250px;
+        }
         &__title {
             width: 640px;
             margin: 0 auto 61px;
@@ -1040,19 +1066,25 @@
             margin: 0 auto 2.6rem auto;
         }
         &__slider {
+            position: relative;
             margin-bottom: 2rem;
             &-container {
                 margin-bottom: 2.4rem;
                 overflow: hidden;
             }
             &-item {
-                width: 281.17px;
-                height: 559px;
+                width: 284px;
+                height: 564px;
+                margin: 0 0.6rem;
                 &-image {
                     width: 254px;
                     height: 535px;
                     border-radius: 2.3rem;
                 }
+            }
+
+            &-slidenav {
+
             }
         }
         button {
@@ -2112,17 +2144,21 @@
         &__projects-slider {
             
             &-wrap {
+                height: 694px;
+                overflow: hidden;
+                padding-top: 74px;
                 width: 1234px;
                 display: flex;
                 justify-content: space-evenly;
                 align-items: flex-start;
                 flex-wrap: wrap;
+                transition: all 0.2s ease-out;
             }
         }
         &__projects-title {
             width: 660px;
             font-size: 36px;
-            margin: 0 auto 74px;
+            margin: 0 auto;
         }
         &__projects-slider-item {
             width: 380.95px;
@@ -2145,6 +2181,11 @@
             width: 12.0625rem;
             line-height: 3.125rem;
         }
+        &__projects-slider-btn-more-cases {
+            width: 232.39px;
+            line-height: 50px;
+            margin: 0 auto;
+        }
     }
 }
 
@@ -2160,7 +2201,9 @@
 
     // SLIDER
 
-    &__slider { }
+    &__slider {
+        position: relative;
+     }
 
     &__slider-container {
         overflow: visible;
@@ -2340,6 +2383,17 @@
         }
     }
 
+    &__slider {
+        width: 19.1875rem;
+        @include center-item-x('relative');
+        &-container {
+            overflow: visible;
+        }
+        &-dotnav {
+            margin-top: 0.6rem;
+        }
+    }
+
     &__items-wrap {
     }
 
@@ -2426,16 +2480,16 @@
             padding-top: 2.6rem;
             padding-bottom: 5rem;
         }
-        &__title {
-            font-size: 2.4375rem;
-            margin-left: 6.2rem;
-            width: 37.6875rem;
+        // &__title {
+        //     font-size: 2.4375rem;
+        //     margin-left: 6.2rem;
+        //     width: 37.6875rem;
 
-        }
-        &__item-title {
-            width: 190px;
-            margin-top: .1rem;
-        }
+        // }
+        // &__item-title {
+        //     width: 190px;
+        //     margin-top: .1rem;
+        // }
     }
 }
 
@@ -2795,6 +2849,13 @@
             padding-top: 2.8rem;
             padding-bottom: 2.4rem;
         }
+        &__arrow {
+            position: absolute;
+            width: 87px;
+            top: 222px;
+            left: 187px;
+            transform: rotate(261deg) scaleX(-1);
+        }
         &__title {
             text-align-last: left;
             margin-left: 1.4rem;
@@ -2824,6 +2885,12 @@
             padding-bottom: 3.3rem;
 
         }
+        &__arrow {
+            width: 117px;
+            top: 210px;
+            left: -36px;
+            transform: rotate(47deg);
+        }
         &__title {
             font-size: 2.1625rem;
             width: 428px;
@@ -2851,6 +2918,11 @@
             padding-top: 30px;
             padding-bottom: 5.1rem;
 
+        }
+        &__arrow {
+            top: 240px;
+            left: 320px;
+            transform: rotate(0deg);
         }
         &__title {
             font-size: 2.1625rem;
@@ -2881,6 +2953,11 @@
             padding-top: 41px;
             padding-bottom: 5.8rem;
 
+        }
+        &__arrow {
+            top: 250px;
+            left: 440px;
+            transform: rotate(348deg);
         }
         &__title {
             font-size: 39px;
@@ -2933,6 +3010,8 @@
         color: $text-light;
         line-height: 1.179;
         margin-top: 0 !important;
+
+        
     }
 
     &__tab-title {
@@ -2966,6 +3045,7 @@
         }
 
         &[aria-expanded=true] {
+            @include gradient-text;
             .s11__tab-plus {
                 transform: rotate(45deg);
             }
@@ -2973,7 +3053,9 @@
     }
 
     &__tab-content {
+        font-size: 0.8125rem;
         margin-top: 0rem;
+        padding-top: 0.3rem;
         padding-bottom: 0.8rem;
     }
 
@@ -3008,6 +3090,9 @@
         }
         &__tab-plus {
             width: 2.5625rem;
+        }
+        &__tab-content {
+            font-size: 1rem;
         }
     }
 }
@@ -3048,8 +3133,8 @@
             margin-right: 0;
         }
         &__tab-content {
+            font-size: 1.15rem;
             padding: 1.05rem 1.1rem 1.05rem 2.5rem;
-
         }
     }
 }
@@ -3252,6 +3337,13 @@
             padding-bottom: 7.8rem;
 
         }
+        &__arrow {
+            position: absolute;
+            width: 90px;
+            top: 61px;
+            left: 561px;
+            transform: rotate(263deg);
+        }
         &__ibg {
             width: 100%;
             height: 100%;
@@ -3367,6 +3459,11 @@
             padding-top: 3.925rem;
             padding-bottom: 6.3rem;
         }
+        &__arrow {
+            top: 81px;
+            left: 631px;
+            transform: rotate(263deg);
+        }
         &__contacts-title {
             width: 17rem;
             margin-top: -32.1rem;
@@ -3474,6 +3571,11 @@
             max-width: unset;
             padding-top: 3.925rem;
             padding-bottom: 3rem
+        }
+        &__arrow {
+            top: 191px;
+            left: 531px;
+            transform: rotate(343deg) scaleX(-1);
         }
         &__contacts-title {
             width: 17rem;

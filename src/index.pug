@@ -8,8 +8,9 @@ block content
 	main.main
 		section.s1 
 			.s1__bg
-				+picture-min(jpg, `${assets}s1-bg`, `${assets}s1-bg`, 'xsml')
+				+picture-min(jpg, `${assets}s1-bg`, `${assets}s1-bg`, 'xsmlb')
 			.container.s1__ctn
+				+icon('s1-arrow').d-none.d-md-block.s1__arrow
 				+picture-min(png, `${assets}s1-man`, `${assets}s1-man`, 'n').s1__img-man
 				.s1__circle
 				.s1__man-name Константин Курышев
@@ -33,23 +34,24 @@ block content
 
 		section.s2#s2
 			.container.s2__ctn 
+				+icon('s2-arrow').d-none.d-xl-block.s2__arrow
 				h2.s2__title Еще немного фактов и&nbsp;цифр обо мне и&nbsp;деятельности
 
 				.s2__list 
 					.s2__list-item.s2__list-item-1
-						img(src=`${assets}s2-i1.svg`, alt="").s2__list-before
+						+picture(png, `${assets}s2-i1`, 'n').s2__list-before
 						.s2__list-title.s2__list-title-1 20 проектов
 						.s2__list-descr.s2__list-descr-1 реализовано в разных нишах
 					.s2__list-item.s2__list-item-2
-						img(src=`${assets}s2-i2.svg`, alt="").s2__list-before
+						+picture(png, `${assets}s2-i2`, 'n').s2__list-before
 						.s2__list-title.s2__list-title-2 от 60 ₽
 						.s2__list-descr.s2__list-descr-2 стоимость заявки
 					.s2__list-item.s2__list-item-3
-						img(src=`${assets}s2-i3.svg`, alt="").s2__list-before.s2__list-before-3
+						+picture(png, `${assets}s2-i3`, 'n').s2__list-before
 						.s2__list-title.s2__list-title-3 более 4млн. ₽
 						.s2__list-descr.s2__list-descr-3 рекламного бюджета доверено
 					.s2__list-item.s2__list-item-4
-						img(src=`${assets}s2-i4.svg`, alt="").s2__list-before.s2__list-before-4
+						+picture(png, `${assets}s2-i4`, 'n').s2__list-before
 						.s2__list-title.s2__list-title-4 более 6 мес.
 						.s2__list-descr.s2__list-descr-4 в среднем работают со&nbsp;мной
 
@@ -82,7 +84,7 @@ block content
 						'qj-g1eSeOUc',
 						'toaqOBFI8jg',
 					]
-				+slider('s3__slider')
+				+slider('s3__slider', '', true)
 					- for(var i = 1; i <= videos.length; i++)
 						li.s3__slider-item
 							+icon('phone-mask').s3__slider-item-phone
@@ -91,8 +93,8 @@ block content
 								+picture(jpg, `${assets}s3-i${i}`, 'n')
 
 								+icon('yt-play').s3__slider-item-play
-							iframe.s3__slider-item-video.s3__slider-item-image(hidden src=`https://www.youtube-nocookie.com/embed/${videos[i - 1]}?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1` width="100%" height="100%" frameborder="0" allowfullscreen uk-responsive)
-
+							//- iframe.s3__slider-item-video.s3__slider-item-image(hidden src=`https://www.youtube-nocookie.com/embed/${videos[i - 1]}?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1` width="100%" height="100%" frameborder="0" allowfullscreen uk-responsive)
+					
 				button.btn.btn-solid-primary Оставить заявку
 
 		section.s4 
@@ -159,7 +161,7 @@ block content
 					h2.s6__quality-title Качество контента
 					p.s6__quality-subtitle Мы предоставляем стильный дизайн креативов#[br.d-none.d-lg-inline] с&nbsp;проработанными текстами на основе болей и потребностей вашей аудитории, что позволяет добиться более высокой эффективности
 
-					+slider('s6__quality-slider')
+					+slider('s6__quality-slider', 'autoplay: true; autoplay-interval: 5000')
 						- for(var i = 1; i <= 4; i++)
 							li.s6__quality-slider-item
 								+picture(png, `${assets}s6-content-i${i}`, 'xm')
@@ -255,6 +257,8 @@ block content
 
 				.s6__projects-slider-wrap.d-none.d-xl-flex
 					+s6-slider-inner
+				
+				button.s6__projects-slider-btn-more-cases.btn.btn-outline-primary.d-none.d-xl-flex(type="button") Посмотреть еще кейсы
 
 		section.s7#s7
 			.s7__ctn.container
@@ -269,7 +273,7 @@ block content
 						'bqL7duGwUqo',
 					]
 
-				+slider('s7__slider')
+				+slider('s7__slider', '', true)
 					- for(var i = 1; i <= videoIds.length; i++)
 						li.s7__slider-item
 							.s7__slider-item-wrap
@@ -279,7 +283,7 @@ block content
 									+picture(jpg, `${assets}s7-projects-i${i}`, 'n')
 
 									+icon('yt-play').s7__slider-item-play
-								iframe.s7__slider-item-video.s7__slider-item-image(hidden src=`https://www.youtube-nocookie.com/embed/${videoIds[i - 1]}?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1` width="100%" height="100%" frameborder="0" allowfullscreen uk-responsive )
+								//- iframe.s7__slider-item-video.s7__slider-item-image(hidden src=`https://www.youtube-nocookie.com/embed/${videoIds[i - 1]}?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1` width="100%" height="100%" frameborder="0" allowfullscreen uk-responsive )
 
 
 		section.s8#s8
@@ -336,7 +340,7 @@ block content
 						},
 					]
 
-				.s8__scrollable-block
+				.s8__scrollable-block.d-none.d-lg-flex
 					each item, idx in list
 						.s8__item
 							.s8__item-left
@@ -348,6 +352,20 @@ block content
 									ul.s8__item-list
 										each listItem in item.list 
 											li!= listItem
+
+				+slider('s8__slider').d-lg-none
+					each item, idx in list
+						li.s8__item
+							.s8__item-left
+								.s8__item-number= item.number
+								.s8__item-day-text= item.dayText
+							.s8__item-right
+								.s8__item-title!= item.title 
+								if item.list
+									ul.s8__item-list
+										each listItem in item.list 
+											li!= listItem
+							
 
 		section.s9 
 			.container.s9__ctn 
@@ -377,6 +395,7 @@ block content
 
 		section.s10 
 			.s10__ctn.container 
+				+icon('s2-arrow').d-none.d-sm-block.s10__arrow
 				h2.s10__title #[span.s10__title--gradient 5 простых шагов для начала сотрудничества]#[br] и получения заявок в ваш проект #[span.s10__title--underline уже через 7 дней]
 
 				.s10__items-block
@@ -428,6 +447,7 @@ block content
 
 			section.s12#s12
 				.s12__ctn.container 
+					+icon('s1-arrow').d-none.d-md-block.s12__arrow
 					.s12__ibg
 						+picture(jpg, `${assets}s6-q-bg`, 'n')
 					h2.s12__title Обсудим ваш проект?
