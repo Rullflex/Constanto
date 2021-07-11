@@ -1341,6 +1341,7 @@
 .s5 {
     position: relative;
     &__ctn {
+        padding-top: 1rem;
         padding-bottom: 3.9rem;
     }
 
@@ -1393,7 +1394,7 @@
         }
         &__title {
             font-size: 1.75rem;
-            margin-top: 5.7rem;
+            margin-top: 6.7rem;
             margin-bottom: 3.6625rem;
         }
         &__items-wrap {
@@ -2327,7 +2328,16 @@
         display: flex;
         align-items: flex-start;
         padding-left: 1.25rem;
+        padding-right: 1.25rem;
         padding-bottom: 1.875rem;
+
+        &::-webkit-scrollbar-track {
+            background: $primary;
+        }   
+        &::-webkit-scrollbar-thumb {
+            background: $primary;
+
+        }
     }
 
     &__items-wrap {
@@ -3167,7 +3177,6 @@
             margin-bottom: 0.8rem;
 
             a {
-                display: flex;
                 margin-right: 1.2625rem;
             }
 

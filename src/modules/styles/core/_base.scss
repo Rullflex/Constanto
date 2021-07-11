@@ -61,6 +61,7 @@ body {
     backface-visibility: hidden;
     @include bg($body-bg);
 
+    font-feature-settings: 'pnum' on, 'lnum' on;
     font-size: $font-size-base;
     font-family: $font-family-base;
     font-weight: normal;
