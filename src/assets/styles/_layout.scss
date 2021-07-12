@@ -315,7 +315,7 @@
                 margin-top: -.3rem;
             }
         }
-        button {
+        &__target-btn {
             width: 13.125rem;
             height: 4.0625rem;
             margin-left: -32.4rem;
@@ -415,11 +415,11 @@
                 word-spacing: -0.1rem;
             }
             &-block {
-                button {
-                    margin-top: 1.2rem;
-                    margin-left: -47.4rem;
-                }
             }
+        }
+        &__target-btn {
+            margin-top: 1.2rem;
+            margin-left: -47.4rem;
         }
         &__numbers {
             &-block {
@@ -515,10 +515,11 @@
             &-block {
                 align-items: flex-start;
                 text-align: left;
-                button {
-                    margin: -87px 0 0 -9px;
-                }
+                
             }
+        }
+        &__target-btn {
+            margin: -72px 0 0 -9px;
         }
         &__numbers {
             &-block {
@@ -994,7 +995,7 @@
             font-size: 1.73rem;
             margin-top: -.8rem;
         }
-         button {
+        &__btn {
             margin: 0 auto;
         }
         &__slider-item {
@@ -1017,7 +1018,7 @@
         &__slider {
             margin-top: -2.4rem;
         }
-        button {
+        &__btn {
             margin-top: -.6rem;
         }
     }
@@ -1048,7 +1049,7 @@
                 }
             }
         }
-        button {
+        &__btn {
             margin-top: 0;
         }
     }
@@ -1087,7 +1088,7 @@
 
             }
         }
-        button {
+        &__btn {
             margin-top: 0;
         }
     }
