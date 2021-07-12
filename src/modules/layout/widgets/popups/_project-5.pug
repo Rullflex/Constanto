@@ -1,0 +1,57 @@
++popup#project-5.project
+    .project__bg
+        +picture(jpg, `${assets}project-bg`, 'xsml')
+    .project__h1 Школа Вокала Яна Марти в Москве
+
+    .project__logo
+        +picture(png, `${assets}s6-project-i5`, 'n')
+
+    .project__socials 
+        a(href="#").project__socials-item
+            +icon('proj-web').project__socials-icon
+            p.project__socials-label yanmarti.ru/vocal/
+        .project__socials-item
+            +icon('proj-people').project__socials-icon
+            p.project__socials-label 87000+ подписчиков
+        a(href="#").project__socials-item
+            +icon('proj-inst').project__socials-icon
+            p.project__socials-label yan_marti
+
+    .project__divider 
+
+    .project__body
+
+        .project__body--left
+
+            .project__h2 Задачи:
+
+            ul.project__list
+                li.project__list-item Протестировать Instagram как рекламный канал для новой школы вокала от известного эстрадного певца
+                li.project__list-item Выстроить поток заявок на пробное занятие
+                li.project__list-item Создать посадочную страницу лендинг, через которую сможем привлекать заявки
+            
+            .project__h2 Показатели:
+
+            ul.project__list
+                li.project__list-item Посадочная страница - лендинг
+                li.project__list-item #[span.project__text--primary 131 заявка по&nbsp;187&nbsp;₽] | бюджет 24&nbsp;535&nbsp;₽
+
+        .project__body--right
+        
+            .project__h2 Результаты:
+
+            .project__badge
+                .project__badge-text 
+                    span 
+                        | Привлекли дизайнера и подготовили отдельно посадочную страницу в виде лендинга#[br]
+                        +icon('proj-web', '#E5FF42').project__socials-icon
+                        | #[a.project__text--yellow(href="#") yanmarti.ru/vocal]
+
+            .project__badge
+                .project__badge-text #[span.project__text--primary Нашли эффективные связки на первое пробное занятие]
+
+            .project__badge
+                .project__badge-text С возложенной задачей справились - в первый месяц:
+
+            .project__badge
+                .project__badge-label заявки по 190 рублей

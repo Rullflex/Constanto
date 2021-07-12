@@ -93,7 +93,7 @@ block content
 								+picture(jpg, `${assets}s3-i${i}`, 'n')
 
 								+icon('yt-play').s3__slider-item-play
-							//- iframe.s3__slider-item-video.s3__slider-item-image(hidden src=`https://www.youtube-nocookie.com/embed/${videos[i - 1]}?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1` width="100%" height="100%" frameborder="0" allowfullscreen uk-responsive)
+							iframe.s3__slider-item-video.s3__slider-item-image(hidden src=`https://www.youtube-nocookie.com/embed/${videos[i - 1]}?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1` width="100%" height="100%" frameborder="0" allowfullscreen uk-responsive)
 					
 				button.btn.btn-solid-primary Оставить заявку
 
@@ -181,7 +181,7 @@ block content
 						ul.s6__projects-slider-list
 							li.s6__projects-slider-list-item Получили целевые заявки по&nbsp;345&nbsp;₽ на пробное занятие на&nbsp;онлайн и оффлайн-направления
 
-						button().s6__projects-slider-btn-more.btn.btn-solid-primary Подробнее
+						button(data-uk-toggle="target: #project-1" tyoe="button").s6__projects-slider-btn-more.btn.btn-solid-primary Подробнее
 
 					li.s6__projects-slider-item
 						.s6__projects-slider-logo
@@ -193,7 +193,7 @@ block content
 						ul.s6__projects-slider-list
 							li.s6__projects-slider-list-item Получили 1400+ заявок по&nbsp;470&nbsp;₽ на&nbsp;пробное индивидуальное занятие стоимостью 750 ₽ с квиз-сайта и лендинга
 
-						button().s6__projects-slider-btn-more.btn.btn-solid-primary Подробнее
+						button(data-uk-toggle="target: #project-2" tyoe="button").s6__projects-slider-btn-more.btn.btn-solid-primary Подробнее
 
 					li.s6__projects-slider-item
 						.s6__projects-slider-logo
@@ -205,7 +205,7 @@ block content
 							li.s6__projects-slider-list-item Получили 590+ заявок на услуги по&nbsp;реставрации кухни по&nbsp;615&nbsp;₽ 
 							li.s6__projects-slider-list-item Реклама хорошо себя показала, и клиент принял решение масштабироваться на&nbsp;второй город
 
-						button().s6__projects-slider-btn-more.btn.btn-solid-primary Подробнее
+						button(data-uk-toggle="target: #project-3" tyoe="button").s6__projects-slider-btn-more.btn.btn-solid-primary Подробнее
 
 					li.s6__projects-slider-item
 						.s6__projects-slider-logo
@@ -217,7 +217,7 @@ block content
 							li.s6__projects-slider-list-item Начали получать от 10 обращений в&nbsp;день на парные и сольные направления от&nbsp;60&nbsp;₽ за заявку
 							li.s6__projects-slider-list-item Стабильный поток заявок и новых клиентов позволил клиенту расширить свой бизнес: сейчас открываются новые залы и группы
 
-						button().s6__projects-slider-btn-more.btn.btn-solid-primary Подробнее
+						button(data-uk-toggle="target: #project-4" tyoe="button").s6__projects-slider-btn-more.btn.btn-solid-primary Подробнее
 
 					li.s6__projects-slider-item
 						.s6__projects-slider-logo
@@ -228,7 +228,7 @@ block content
 						ul.s6__projects-slider-list
 							li.s6__projects-slider-list-item Получили 131 заявку по&nbsp;187&nbsp;₽ на&nbsp;бесплатное пробное занятие
 
-						button().s6__projects-slider-btn-more.btn.btn-solid-primary Подробнее
+						button(data-uk-toggle="target: #project-5" tyoe="button").s6__projects-slider-btn-more.btn.btn-solid-primary Подробнее
 						
 					li.s6__projects-slider-item
 						.s6__projects-slider-logo
@@ -239,7 +239,7 @@ block content
 						ul.s6__projects-slider-list
 							li.s6__projects-slider-list-item Привлекли в&nbsp;Instagram более 6 000 живой аудитории при средней стоимости подписчика 24&nbsp;₽ в&nbsp;течение 5 месяцев ведения рекламы
 
-						button().s6__projects-slider-btn-more.btn.btn-solid-primary Подробнее
+						button(data-uk-toggle="target: #project-6" tyoe="button").s6__projects-slider-btn-more.btn.btn-solid-primary Подробнее
 
 					li.s6__projects-slider-item
 						.s6__projects-slider-logo
@@ -250,7 +250,7 @@ block content
 						ul.s6__projects-slider-list
 							li.s6__projects-slider-list-item На протяжение 7 месяцев ведения рекламы получали заявки по&nbsp;430&nbsp;₽ через квиз-сайт
 
-						button().s6__projects-slider-btn-more.btn.btn-solid-primary Подробнее
+						button(data-uk-toggle="target: #project-7" tyoe="button").s6__projects-slider-btn-more.btn.btn-solid-primary Подробнее
 
 				+slider('s6__projects-slider').d-xl-none
 					+s6-slider-inner
@@ -283,7 +283,7 @@ block content
 									+picture(jpg, `${assets}s7-projects-i${i}`, 'n')
 
 									+icon('yt-play').s7__slider-item-play
-								//- iframe.s7__slider-item-video.s7__slider-item-image(hidden src=`https://www.youtube-nocookie.com/embed/${videoIds[i - 1]}?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1` width="100%" height="100%" frameborder="0" allowfullscreen uk-responsive )
+								iframe.s7__slider-item-video.s7__slider-item-image(hidden src=`https://www.youtube-nocookie.com/embed/${videoIds[i - 1]}?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1` width="100%" height="100%" frameborder="0" allowfullscreen uk-responsive )
 
 
 		section.s8#s8

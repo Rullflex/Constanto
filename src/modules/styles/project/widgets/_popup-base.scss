@@ -4,13 +4,18 @@
     background: rgba(0, 0, 0, .6);
 
     &__body {
+        width: 17.5rem;
         padding: 0;
+        position: relative;
+        border-radius: 7px;
+        margin-top: auto !important;
+        margin-bottom: auto !important;
     }
 
     &__close {
+        color: $primary;
         svg {
             width: 1rem;
-            height: 12px;
         }
     }
 
@@ -19,9 +24,25 @@
     &__subtitle {}
 }
 
+@media (min-width: map-get($grid-breakpoints, sm)) {
+    .popup {
+
+        &__body {}
+
+        &__close {
+            svg {
+                width: 1.5rem;
+            }
+        }
+
+        &__title {}
+
+        &__subtitle {}
+    }
+}
+
 @media (min-width: map-get($grid-breakpoints, md)) {
     .popup {
-        padding: 2.5rem;
 
         &__body {}
 
