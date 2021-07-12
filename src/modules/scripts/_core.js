@@ -509,7 +509,6 @@ export const form = {
     // UIkit.modal(`#thanks`).show();
 
     this.sendFormData(form);
-    setTimeout('location="https://romangordin.ru/thanks/index.html";', 500);
   },
 
   sendFormData(form, phpSrc = `${app.apiSrc}mail.php`) {
