@@ -978,6 +978,13 @@
         height: 27.25rem;
         border-radius: 1.6875rem;
         @include center-item;
+
+        cursor: pointer;
+
+        &[aria-expanded=true] {
+            opacity: 0;
+            transition: $transition--normal;
+        }
     }
 
     &__slider-dotnav {
@@ -1126,7 +1133,7 @@
         color: #828282;
 
         li {
-            margin-bottom: 0.2rem;
+            margin-bottom: 0.6rem;
             &::before {
                 content: '• ';
             }
@@ -1808,6 +1815,21 @@
             font-size: 0.8125rem;
 
             margin-bottom: 0.5rem;
+
+            &:active,
+            &:focus-visible {
+                background: linear-gradient(180deg, #FF5B81 0%, #C82F51 100%);
+                color: #FFFFFF;
+                border-color: transparent;
+            }
+    
+            @media (min-width: map-get($grid-breakpoints, lg)) {
+                &:hover {
+                    background: linear-gradient(180deg, #FF5B81 0%, #C82F51 100%);
+                    color: #FFFFFF;
+                    border-color: transparent;
+                }
+            }
         }
 
         &-list {
@@ -1882,13 +1904,15 @@
             height: 37.1875rem;
         }
          &__projects-slider-link {
-                height: 2.813125rem;
-                margin-left: .6rem;
-                font-size: 18px;
-                margin-top: .1rem;
-                padding-top: .3rem;
-                padding-right: 1.4rem;
-            }
+            height: 2.813125rem;
+            margin-left: .6rem;
+            font-size: 18px;
+            margin-top: .1rem;
+            padding-top: .3rem;
+            padding-right: 1.4rem;
+
+            
+        }
         &__projects-slider-dotnav {
             margin: 2rem 0 0;
             li {
@@ -2082,7 +2106,7 @@
             top:0;
         }
         &__projects-slider-logo {
-            top: -1.5rem;
+            top: -3.5rem;
         }
         &__quality {
             &-block {
@@ -2165,7 +2189,7 @@
             width: 380.95px;
             height: 588.79px;
             margin-right: 30px;
-            margin-bottom: 73px;
+            margin-bottom: 113px;
         }
         &__projects-slider-dotnav {
             margin-top: 2.93rem;
@@ -2204,7 +2228,8 @@
 
     &__slider {
         position: relative;
-     }
+        
+    }
 
     &__slider-container {
         overflow: visible;
@@ -2217,7 +2242,15 @@
         width: 100%;
         height: 34.9375rem;
         position: relative;
-        margin-right: 1.25rem;
+        padding-right: 1.25rem;
+
+        box-sizing: content-box;
+
+        &-wrap {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
     }
 
     &__slider-item-phone {
@@ -2243,6 +2276,13 @@
         height: 33.2rem;
         border-radius: 1.6875rem;
         @include center-item;
+
+        cursor: pointer;
+
+        &[aria-expanded=true] {
+            opacity: 0;
+            transition: $transition--normal;
+        }
     }
 
     &__slider-dotnav {
@@ -2333,7 +2373,6 @@
             overflow: hidden;
         }
         &__slider-item {
-            box-sizing: content-box;
             padding-right: 23px;
             margin-right: 0;
             &-wrap {
@@ -2422,7 +2461,7 @@
         }
 
         &-right {
-            padding: 0.6625rem 0.925rem 0 1.3625rem;
+            padding: 0.6625rem 0.925rem 0 1.0625rem;
         }
 
         &-number {
@@ -2807,7 +2846,8 @@
 
         &--gradient {
             font-weight: 700;
-            @include gradient-text;
+            color: $primary;
+            // @include gradient-text;
         }
 
         &--underline {
@@ -3047,12 +3087,13 @@
             color: inherit;
 
             @media (min-width: map-get($grid-breakpoints, lg)) {
-                @include gradient-text;
+                color: $primary;
             }
         }
 
         &[aria-expanded=true] {
-            @include gradient-text;
+            color: $primary;
+            
             .s11__tab-plus {
                 transform: rotate(45deg);
             }
@@ -3487,6 +3528,10 @@
         &__contacts-social-links {
             margin-top: 0rem;
             margin-left: 8.8rem;
+
+            a:hover {
+                filter: drop-shadow(0px 0px 11px rgba(120, 247, 255, 0.61));
+            }
         }
         &__contacts-btn {
             margin-left: 8.8rem;

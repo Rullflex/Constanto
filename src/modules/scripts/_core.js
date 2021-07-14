@@ -506,7 +506,7 @@ export const form = {
 
   showSuccess(form) {
     // ym(71270149,'reachGoal','form')
-    // UIkit.modal(`#thanks`).show();
+    UIkit.modal(`#thanks`).show();
 
     this.sendFormData(form);
   },

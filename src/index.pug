@@ -1,8 +1,8 @@
 extends modules/layout/_layout
 
 prepend head
-	title Title your page
-	meta(name="description", content="Описание страницы")
+	title Целевые клиенты в ваш бизнес
+	meta(name="description", content="Целевые клиенты в ваш бизнес")
 
 block content
 	main.main
@@ -17,7 +17,7 @@ block content
 				.s1__man-position Специалист по рекламе#[br] в Instagram и Facebook
 
 				h1.s1__title Целевые клиенты в&nbsp;ваш&nbsp;бизнес
-				p.s1__subtitle Начните получать целевой и стабильный поток заявок от 60₽ в ваш бизнес с помошью таргетированной рекламы
+				p.s1__subtitle Начните получать целевой и стабильный поток заявок от 60₽ в&nbsp;ваш бизнес с&nbsp;помощью таргетированной рекламы
 
 				.s1__target-block
 					.s1__target-gradient Запишитесь на бесплатную консультацию,
@@ -35,7 +35,7 @@ block content
 		section.s2#s2
 			.container.s2__ctn 
 				+icon('s2-arrow').d-none.d-xl-block.s2__arrow
-				h2.s2__title Еще немного фактов и&nbsp;цифр обо мне и&nbsp;деятельности
+				h2.s2__title(data-uk-scrollspy="cls:uk-animation-slide-bottom-medium; repeat: true") Еще немного фактов и&nbsp;цифр обо мне и&nbsp;деятельности
 
 				.s2__list 
 					.s2__list-item.s2__list-item-1
@@ -55,7 +55,7 @@ block content
 						.s2__list-title.s2__list-title-4 более 6 мес.
 						.s2__list-descr.s2__list-descr-4 в среднем работают со&nbsp;мной
 
-				.s2__chart-block
+				.s2__chart-block(data-uk-scrollspy="cls:uk-animation-slide-right-medium; repeat: true")
 					.s2__chart-ibg
 						+picture(jpg, `${assets}s2-bg-block`, 'xsml')
 					.s2__chart-title В команде есть дизайнер и копирайтер
@@ -66,7 +66,7 @@ block content
 			.s3__bg
 				+picture(jpg, `${assets}s3-bg`, 'xsmlb')
 			.container.s3__ctn 
-				h2.s3__title Посмотрите креативы, которые мы делаем с&nbsp;командой:
+				h2.s3__title(data-uk-scrollspy="cls:uk-animation-slide-bottom-medium; repeat: true") Посмотрите креативы, которые мы делаем с&nbsp;командой:
 				-
 					const videos = [
 						'O97l4dlCl4c',
@@ -84,27 +84,27 @@ block content
 						'qj-g1eSeOUc',
 						'toaqOBFI8jg',
 					]
-				+slider('s3__slider', '', true)
+				+slider('s3__slider', '', true)(data-uk-scrollspy="cls:uk-animation-fade; repeat: true")
 					- for(var i = 1; i <= videos.length; i++)
 						li.s3__slider-item
 							+icon('phone-mask').s3__slider-item-phone
 
-							a.s3__slider-item-image(href="#" data-uk-toggle="target: +; animation: uk-animation-fade")
+							.s3__slider-item-image
 								+picture(jpg, `${assets}s3-i${i}`, 'n')
 
 								+icon('yt-play').s3__slider-item-play
-							iframe.s3__slider-item-video.s3__slider-item-image(hidden src=`https://www.youtube-nocookie.com/embed/${videos[i - 1]}?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1` allowfullscreen data-uk-responsive)
+							//- iframe.s3__slider-item-video.s3__slider-item-image(hidden src=`https://www.youtube-nocookie.com/embed/${videos[i - 1]}?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1` allowfullscreen data-uk-responsive)
 					
 				a(href="#s12" data-uk-scroll).s3__btn.btn.btn-solid-primary Оставить заявку
 
 		section.s4 
 			.container.s4__ctn 
-				h2.s4__title С каждым днём на рынке появляется всё больше таргетологов.
-				p.s4__subtitle Многие из них в процессе работы оказываются некомпетентны или не выполняют свои обязательства
+				h2.s4__title(data-uk-scrollspy="cls:uk-animation-slide-bottom-medium; repeat: true") С каждым днём на рынке появляется всё больше таргетологов.
+				p.s4__subtitle(data-uk-scrollspy="cls:uk-animation-slide-bottom-medium; repeat: true") Многие из них в процессе работы оказываются некомпетентны или не выполняют свои обязательства
 
 				.s4__block.s4__block-1
-					.s4__block-title Возможно, вам знакомы ситуации, когда:
-					ul.s4__block-list 
+					.s4__block-title(data-uk-scrollspy="cls:uk-animation-slide-left-medium; repeat: true") Возможно, вам знакомы ситуации, когда:
+					ul.s4__block-list(data-uk-scrollspy="cls:uk-animation-slide-left-medium; repeat: true")
 						li Таргетолог долго не выходит на связь, исчезает
 						li Вам приходится контролировать его работу и тратить своё время
 						li Нет отчётности: количество заявок, их цена и окупаемость ваших вложений
@@ -112,8 +112,8 @@ block content
 					+picture-min(png, `${assets}s4-i1`, `${assets}s4-i1`, 'xs').s4__block-image.s4__block-image-1
 
 				.s4__block.s4__block-2
-					.s4__block-title.s4__block-title-2 В итоге вы нервничаете и&nbsp;не знаете, что делать
-					ul.s4__block-list.s4__block-list-2 
+					.s4__block-title.s4__block-title-2(data-uk-scrollspy="cls:uk-animation-slide-right-medium; repeat: true") В итоге вы нервничаете и&nbsp;не знаете, что делать
+					ul.s4__block-list.s4__block-list-2(data-uk-scrollspy="cls:uk-animation-slide-right-medium; repeat: true")
 						li Чтобы минимизировать риск нарваться на&nbsp;подобные ситуации, вы обращаетесь к&nbsp;вашим знакомым, которые могут порекомендовать хорошего специалиста
 						li Но если такой возможности не предоставляется, вам приходится искать нового специалиста самостоятельно
 						li Из-за чего перед вами встает вопрос: какого специалиста выбрать, чтобы он качественно предоставил услугу и не обманул вас
@@ -121,9 +121,9 @@ block content
 
 		section.s5 
 			.s5__ctn.container
-				h2.s5__title Почему стоит рассмотреть меня в качестве специалиста?
+				h2.s5__title(data-uk-scrollspy="cls:uk-animation-slide-bottom-medium; repeat: true") Почему стоит рассмотреть меня в качестве специалиста?
 
-				.s5__items-wrap
+				.s5__items-wrap(data-uk-scrollspy="cls:uk-animation-fade; repeat: true")
 					.s5__item.s5__item-1
 						+icon('script').s5__item-icon
 						.s5__item-title ИП, работаю#[br] по договору
@@ -158,10 +158,10 @@ block content
 				.s6__quality-block
 					.s6__quality-block-bg.d-none.d-xl-block 
 						+picture(jpg, `${assets}s6-q-bg`, 'n')
-					h2.s6__quality-title Качество контента
-					p.s6__quality-subtitle Мы предоставляем стильный дизайн креативов#[br.d-none.d-lg-inline] с&nbsp;проработанными текстами на основе болей и потребностей вашей аудитории, что позволяет добиться более высокой эффективности
+					h2.s6__quality-title(data-uk-scrollspy="cls:uk-animation-slide-bottom-medium; repeat: true") Качество контента
+					p.s6__quality-subtitle(data-uk-scrollspy="cls:uk-animation-slide-bottom-medium; repeat: true") Мы предоставляем стильный дизайн креативов#[br.d-none.d-lg-inline] с&nbsp;проработанными текстами на основе болей и потребностей вашей аудитории, что позволяет добиться более высокой эффективности
 
-					+slider('s6__quality-slider', 'autoplay: true; autoplay-interval: 5000')
+					+slider('s6__quality-slider', 'autoplay: true; autoplay-interval: 5000')(data-uk-scrollspy="cls:uk-animation-fade; repeat: true")
 						- for(var i = 1; i <= 4; i++)
 							li.s6__quality-slider-item
 								+picture(png, `${assets}s6-content-i${i}`, 'xm')
@@ -169,7 +169,7 @@ block content
 					a(href="#s12" data-uk-scroll).s6__quality-btn.btn.btn-solid-primary Оставить заявку
 
 
-				h2.s6__projects-title Клиентские проекты, с&nbsp;которыми мы работаем более 6 месяцев:
+				h2.s6__projects-title#s6-cases(data-uk-scrollspy="cls:uk-animation-slide-bottom-medium; repeat: true") Клиентские проекты, с&nbsp;которыми мы работаем более 6 месяцев:
 
 				mixin s6-slider-inner 
 					li.s6__projects-slider-item
@@ -262,7 +262,7 @@ block content
 
 		section.s7#s7
 			.s7__ctn.container
-				h2.s7__title Больше за меня скажут мои клиенты:
+				h2.s7__title(data-uk-scrollspy="cls:uk-animation-slide-bottom-medium; repeat: true") Больше за меня скажут мои клиенты:
 
 				-
 					const videoIds = [
@@ -273,22 +273,21 @@ block content
 						'bqL7duGwUqo',
 					]
 
-				+slider('s7__slider', '', true)
+				+slider('s7__slider', '', true)(data-uk-scrollspy="cls:uk-animation-fade; repeat: true")
 					- for(var i = 1; i <= videoIds.length; i++)
 						li.s7__slider-item
 							.s7__slider-item-wrap
 								+icon('phone-mask').s7__slider-item-phone
 
-								a.s7__slider-item-image(href="#" data-uk-toggle="target: +; animation: uk-animation-fade")
+								.s7__slider-item-image
 									+picture(jpg, `${assets}s7-projects-i${i}`, 'n')
 
 									+icon('yt-play').s7__slider-item-play
-								iframe.s7__slider-item-video.s7__slider-item-image(hidden src=`https://www.youtube-nocookie.com/embed/${videoIds[i - 1]}?autoplay=0&amp;showinfo=0&amp;rel=0&amp;modestbranding=1&amp;playsinline=1` allowfullscreen data-uk-responsive )
 
 
 		section.s8#s8
 			.s8__ctn.container 
-				h2.s8__title Последовательность действий в&nbsp;начале сотрудничества
+				h2.s8__title(data-uk-scrollspy="cls:uk-animation-slide-bottom-medium; repeat: true") Последовательность действий в&nbsp;начале сотрудничества
 
 				-
 					var list = [
@@ -340,7 +339,7 @@ block content
 						},
 					]
 
-				.s8__scrollable-block.d-none.d-lg-flex
+				.s8__scrollable-block.d-none.d-lg-flex(data-uk-scrollspy="cls:uk-animation-fade; repeat: true")
 					each item, idx in list
 						.s8__item
 							.s8__item-left
@@ -371,9 +370,9 @@ block content
 			.container.s9__ctn 
 				+picture-min(jpg, `${assets}s9-bg`, `${assets}s9-bg`, 'xsml').s9__bg
 				.s9__conditions-block
-					h2.s9__title Условия нашего сотрудничества
+					h2.s9__title(data-uk-scrollspy="cls:uk-animation-slide-bottom-medium; repeat: true") Условия нашего сотрудничества
 
-					.s9__conditions-list
+					.s9__conditions-list(data-uk-scrollspy="cls:uk-animation-fade; repeat: true")
 						.s9__conditions-item
 							+icon('duration').s9__conditions-icon
 							.s9__conditions-text Длительность#[br] #[span.s9__conditions-text--underline 1 месяц]
@@ -397,9 +396,9 @@ block content
 			.s10__ctn.container 
 				+icon('s2-arrow').d-none.d-sm-block.s10__arrow
 				+picture(png, `${assets}s10-check`, 'n').d-none.d-xl-block.s10__img-check
-				h2.s10__title #[span.s10__title--gradient 5 простых шагов для начала сотрудничества]#[br] и получения заявок в ваш проект #[span.s10__title--underline уже через 7 дней]
+				h2.s10__title(data-uk-scrollspy="cls:uk-animation-slide-bottom-medium; repeat: true") #[span.s10__title--gradient 5 простых шагов для начала сотрудничества]#[br] и получения заявок в ваш проект #[span.s10__title--underline уже через 7 дней]
 
-				.s10__items-block
+				.s10__items-block(data-uk-scrollspy="cls:uk-animation-fade; repeat: true")
 					.s10__item
 						.s10__item-number 01
 						.s10__item-text Оставьте заявку на сайте
@@ -422,7 +421,7 @@ block content
 				+picture(jpg, `${assets}s11_footer-bg`, 'xsmlb')
 			section.s11#s11
 				.s11__ctn.container 
-					h2.s11__title Часто задаваемые вопросы
+					h2.s11__title(data-uk-scrollspy="cls:uk-animation-slide-bottom-medium; repeat: true") Часто задаваемые вопросы
 
 					ul.s11__tabs(data-uk-accordion)
 						li.s11__tab-item 
@@ -451,10 +450,10 @@ block content
 					+icon('s1-arrow').d-none.d-md-block.s12__arrow
 					.s12__ibg
 						+picture(jpg, `${assets}s6-q-bg`, 'n')
-					h2.s12__title Обсудим ваш проект?
-					p.s12__subtitle Закажите бесплатный аудит, в&nbsp;котором вы получите решение для&nbsp;конкретно вашей задачи
+					h2.s12__title(data-uk-scrollspy="cls:uk-animation-slide-bottom-medium; repeat: true") Обсудим ваш проект?
+					p.s12__subtitle(data-uk-scrollspy="cls:uk-animation-slide-bottom-medium; repeat: true") Закажите бесплатный аудит, в&nbsp;котором вы получите решение для&nbsp;конкретно вашей задачи
 
-					form.s12__form
+					form.s12__form(data-uk-scrollspy="cls:uk-animation-fade; repeat: true")
 						p.s12__form-title Заполните форму и&nbsp;я&nbsp;свяжусь с вами
 
 						.s12__form-input-wrap.input-wrap.s12__form-input-1
@@ -478,7 +477,7 @@ block content
 							a(href=tgLink, target="_blank", rel="noopener noreferrer"): +icon('tg')
 							a(href=instLink, target="_blank", rel="noopener noreferrer"): +icon('inst')
 
-						button.s12__contacts-btn.btn.btn-outline-primary Обратный звонок
+						button.s12__contacts-btn.btn.btn-outline-primary(style="opacity: 0; visibility: hidden;") Обратный звонок
 
 			footer.footer 
 				.footer__ctn.container 

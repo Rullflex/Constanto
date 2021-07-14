@@ -1,2 +1,13 @@
 +popup#thanks
-    
+    .thanks__bg
+        +picture(jpg, `${assets}thanks-bg`, 'n')
+
+    .thanks__logo: +icon('logo')
+    .thanks__title Спасибо за обращение!
+    .thanks__subtitle Я свяжусь с вами в&nbsp;течение 15 минут.
+    .thanks__social-block 
+        .thanks__social-call Подписывайтесь на мои#[br] социальные сети:
+        .thanks__social-links
+            a(href=waLink, target="_blank", rel="noopener noreferrer"): +icon('wa')
+            a(href=tgLink, target="_blank", rel="noopener noreferrer"): +icon('tg')
+            a(href=instLink, target="_blank", rel="noopener noreferrer"): +icon('inst')
